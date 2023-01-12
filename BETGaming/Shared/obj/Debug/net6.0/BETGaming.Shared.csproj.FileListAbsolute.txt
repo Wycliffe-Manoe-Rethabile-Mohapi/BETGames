@@ -1,0 +1,12 @@
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\bin\Debug\net6.0\BETGaming.Shared.deps.json
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\bin\Debug\net6.0\BETGaming.Shared.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\bin\Debug\net6.0\BETGaming.Shared.pdb
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.csproj.AssemblyReference.cache
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.AssemblyInfoInputs.cache
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.AssemblyInfo.cs
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.csproj.CoreCompileInputs.cache
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\refint\BETGaming.Shared.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\BETGaming.Shared.pdb
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Shared\obj\Debug\net6.0\ref\BETGaming.Shared.dll
