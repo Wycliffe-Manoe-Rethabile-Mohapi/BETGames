@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dP9ilvkKOdcLyit+K8nlgu5REs9Zx/qrqsQOZyu+/iA=",
+  "Hash": "XfxzyqtLzv4ueiamsyjNqKTT5hPrtbhjb5g8xpQGcrA=",
   "Source": "BETGaming.Server",
   "BasePath": "_content/BETGaming.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "BETGaming.Client",
       "GetPublishAssetsTargets": "ComputeFilesToPublish;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true;Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "BuildProjectReferences=false;ResolveAssemblyReferencesFindRelatedSatellites=true;_PublishingBlazorWasmProject=true",
       "AdditionalPublishPropertiesToRemove": "NoBuild;RuntimeIdentifier;WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
@@ -28,6 +28,74 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Abstractions.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.abstractions\\2.1.15\\lib\\netstandard2.0\\Arch.EntityFrameworkCore.Abstractions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Design.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Design.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.design\\2.1.15\\lib\\netstandard2.0\\Arch.EntityFrameworkCore.Design.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore\\2.1.15\\lib\\netstandard2.0\\Arch.EntityFrameworkCore.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Relational.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Relational.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.relational\\2.1.15\\lib\\netstandard2.0\\Arch.EntityFrameworkCore.Relational.dll"
+    },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BETGaming.Client.dll",
       "SourceId": "BETGaming.Client",
@@ -182,23 +250,6 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
-      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "BETGaming.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\native\\icudt.dat"
-    },
-    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -248,6 +299,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -367,6 +435,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\lib\\net6.0\\Microsoft.CSharp.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Abstractions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Memory.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.1.1\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Memory.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.dll",
@@ -741,6 +843,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Remotion.Linq.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Remotion.Linq.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\remotion.linq\\2.2.0\\lib\\netstandard1.0\\Remotion.Linq.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -1370,6 +1489,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\runtimes\\browser-wasm\\lib\\net6.0\\System.Globalization.Extensions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Interactive.Async.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Interactive.Async.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\system.interactive.async\\3.1.1\\lib\\netstandard1.3\\System.Interactive.Async.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Compression.Brotli.dll",
@@ -3514,6 +3650,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Data.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+Kt+nNHk.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Remotion.Linq.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Remotion.Linq.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Remotion.Linq.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+nhnUul8.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -3529,6 +3682,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XDocument.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+Pf+eJVQ.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+qCVO1GY.gz",
@@ -4330,6 +4500,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Dynamic.Runtime.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\bTZ+aT1M.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Interactive.Async.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Interactive.Async.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Interactive.Async.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\bwtqf8yQ.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -4551,6 +4738,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Cryptography.Csp.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\EA22fMLo.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Relational.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Relational.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Relational.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\eLTkqsC0.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -4685,6 +4889,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\FObqHSRI.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\fPDRvBPg.gz",
@@ -5129,6 +5350,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\KjH1fV2G.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Abstractions.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\kkdYjlJf.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -5433,6 +5671,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.Watcher.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\mQxMB09R.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Caching.Memory.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\My8d+dWo.gz",
@@ -6285,6 +6540,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.TraceSource.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\UNnZOaxf.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Arch.EntityFrameworkCore.Design.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Design.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Arch.EntityFrameworkCore.Design.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\uOeLAQ+A.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -6897,23 +7169,6 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BETGaming.Client.styles.css"
     },
     {
-      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\service-worker\\service-worker.js",
-      "SourceId": "BETGaming.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\service-worker\\",
-      "BasePath": "/",
-      "RelativePath": "service-worker.js",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorServiceWorker",
-      "AssetTraitValue": "ServiceWorkerJs",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "wwwroot\\service-worker.js"
-    },
-    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\service-worker-assets.js.build",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -6929,6 +7184,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\service-worker-assets.js.build"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\service-worker\\service-worker.js",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\service-worker\\",
+      "BasePath": "/",
+      "RelativePath": "service-worker.js",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorServiceWorker",
+      "AssetTraitValue": "ServiceWorkerJs",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "wwwroot\\service-worker.js"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\css\\app.css",
@@ -6980,6 +7252,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -7082,23 +7371,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "BETGaming.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

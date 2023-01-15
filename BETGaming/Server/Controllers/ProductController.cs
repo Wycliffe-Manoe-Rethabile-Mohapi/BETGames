@@ -44,7 +44,7 @@ namespace BETGaming.Server.Controllers
                 Price = 4.0m,
                 ImageURL = "images/4.png"
 
-            },
+            }
         };
 
         [HttpGet]

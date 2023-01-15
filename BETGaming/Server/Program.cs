@@ -1,5 +1,10 @@
 global using BETGaming.Shared;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+using Arch.EntityFrameworkCore;
+using BETGaming.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +17,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+IConfiguration configuration = new ConfigurationBuilder()
+   .AddJsonFile("appsettings.json", true, true)
+   .Build();
+
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
+
 
 //swagger
 app.UseSwaggerUI();
