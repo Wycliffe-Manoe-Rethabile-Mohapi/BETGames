@@ -105,6 +105,10 @@
       "url": "_framework\/Arch.EntityFrameworkCore.Relational.dll"
     },
     {
+      "hash": "sha256-xQBIin4YpqDObdqwau\/5dr8XQEq54hlxV4gBgNtUqbc=",
+      "url": "_framework\/System.Net.Http.Formatting.dll"
+    },
+    {
       "hash": "sha256-XBf6Fkkj3RbYzEYJK50myG8AEUvn0E0yo79DWqFFF6s=",
       "url": "_framework\/Microsoft.AspNetCore.Authorization.dll"
     },
@@ -199,6 +203,14 @@
     {
       "hash": "sha256-9Kkxpe\/nXXP3FmowCjDeA4p54SbRWz0G1d0lfgRni0c=",
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "hash": "sha256-etsgJYQb32kqVnEuCK\/nXhcwxx1keKj+1XWs1DJRpmI=",
+      "url": "_framework\/Newtonsoft.Json.dll"
+    },
+    {
+      "hash": "sha256-tgbl3XemJCyh8d9xfrU9lQWuVpBDMLl1wI1PLb6MMxk=",
+      "url": "_framework\/Newtonsoft.Json.Bson.dll"
     },
     {
       "hash": "sha256-w+x3kmh2yV0zdw3I6wXw+gVW\/VTAUUdHJZNYC3a\/Ly0=",
@@ -905,19 +917,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-\/9EiklgkpffdNjiAwtU7Mv7dGugjRfpTYQysjD8Vqys=",
+      "hash": "sha256-Tar\/\/9FruUBEf6xAHuT8qWIXggK0U8u\/Et1BO4uckrI=",
       "url": "_framework\/BETGaming.Shared.dll"
     },
     {
-      "hash": "sha256-LWGb0\/NAd8DwwYkzYrqL0rvw7swCTlI4Kgnof6W556g=",
+      "hash": "sha256-wNxd6XIzLyhKR\/oHDlw8WpYhVlB+8eeBXHeSAgFYofg=",
       "url": "_framework\/BETGaming.Shared.pdb"
     },
     {
-      "hash": "sha256-ruxrfTJkB3UX+Astw5vzQKB\/d5qVpitUJzafe9YMshg=",
+      "hash": "sha256-WvmmZbOt8jVfZ8EPaiJinTjJphNoVaztoQkBVAnVc2w=",
       "url": "_framework\/BETGaming.Client.dll"
     },
     {
-      "hash": "sha256-4JE8LdcWN7D53L3uV0ZdvFdPzmVOpdju196IQ56MdhQ=",
+      "hash": "sha256-3fo1W+5gzQCz1lBTDgvCNFwxdM1\/WLa052IrpRC98l4=",
       "url": "_framework\/BETGaming.Client.pdb"
     },
     {
@@ -925,9 +937,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-SccD0jlJojQJvcSgUjYaNxWhDlAgL+MlCGHqDkou0rU=",
+      "hash": "sha256-OFQ86\/iXUe95p9JJtMkzg6f79G00xhVyRTY9VdyaeA4=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "IGHawBRd"
+  "version": "rDzl2eKm"
 };
