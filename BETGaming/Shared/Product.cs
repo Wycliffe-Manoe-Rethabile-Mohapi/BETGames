@@ -1,6 +1,7 @@
 ﻿using Arch.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,7 @@ namespace BETGaming.Shared
         public string ImageURL { get; set; } = string.Empty;
         [Column(TypeName = "decimal(18,4)")]
         public decimal Price { get; set; }
+        public Category? Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }
