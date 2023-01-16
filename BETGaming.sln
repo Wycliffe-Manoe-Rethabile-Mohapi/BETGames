@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETGaming.Server", "BETGaming\Server\BETGaming.Server.csproj", "{5458CF04-EDF1-42C9-9D40-C77B843C0361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETGaming.Server", "BETGaming\Server\BETGaming.Server.csproj", "{5458CF04-EDF1-42C9-9D40-C77B843C0361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETGaming.Client", "BETGaming\Client\BETGaming.Client.csproj", "{4780B584-F643-49D5-9573-AD0B3B927F49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETGaming.Client", "BETGaming\Client\BETGaming.Client.csproj", "{4780B584-F643-49D5-9573-AD0B3B927F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETGaming.Shared", "BETGaming\Shared\BETGaming.Shared.csproj", "{B6911006-D3D1-45DF-97C8-325081A70A55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETGaming.Shared", "BETGaming\Shared\BETGaming.Shared.csproj", "{B6911006-D3D1-45DF-97C8-325081A70A55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

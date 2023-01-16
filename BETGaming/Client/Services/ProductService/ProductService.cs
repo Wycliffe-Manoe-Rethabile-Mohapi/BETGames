@@ -20,5 +20,12 @@ namespace BETGaming.Client.Services.ProductService
             if (result != null && result.Data != null)
                 Products = result.Data;
         }
+
+        public async Task<ServiceResponse<Product>> GetProduct(int productId)
+        {
+            var result = await HttpClient.GetFromJsonAsync<ServiceResponse<Product>>($"api/Product/{productId}");
+
+            return result;
+        }
     }
 }

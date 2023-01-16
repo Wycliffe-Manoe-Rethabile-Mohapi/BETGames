@@ -1,0 +1,51 @@
+﻿@page "/product/{id:int}"
+@inject IProductService ProductService
+
+
+@if (product==null)
+{
+    <span>@Message</span>
+}
+else
+{
+    <div class ="media">
+        <div class="media-img-wrapper mr-2">
+            <img class="media-img" src="@product.ImageURL" alt="@product.Title" />
+        </div>
+        <div class="media-body">
+            <a href="#">
+                <h2 class="mb-0">@product.Title</h2>
+                <p>@product.Description</p>
+                <h4 class="price">
+                    R @product.Price
+                </h4>
+            </a>
+        </div>
+    </div>
+    
+}
+
+    @code 
+{
+    private Product? product = null;
+    public string Message { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async  Task  OnParametersSetAsync()
+    {
+        Message = "loading Product...";
+
+        var result = await ProductService.GetProduct(Id);
+
+        if (!result.Success)
+        {
+            Message = result.Message;
+        }
+        else
+        {
+            product = result.Data;
+        }
+    }
+}

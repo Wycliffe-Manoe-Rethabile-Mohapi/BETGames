@@ -875,3 +875,4 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Newtonso
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\jJsAGDh+.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\xDfv3x89.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\DzAov9h3.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Pages\ProductDetails.razor.rz.scp.css
