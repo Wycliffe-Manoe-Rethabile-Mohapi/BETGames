@@ -29,5 +29,15 @@ namespace BETGaming.Server.Controllers
             var result = await _ProductService.GetProductAsync(productId);
             return Ok(result);
         }
+
+
+        [HttpGet("category/{categoruUrl}")]
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProductByCategoryUrl(string categoruUrl)
+        {
+            var result = await _ProductService.GetProductsByCategoryAsync(categoruUrl); 
+            return Ok(result);
+        }
+
+
     }
 }
