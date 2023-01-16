@@ -3,6 +3,7 @@ using BETGaming.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BETGaming.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230116154610_categoeries")]
+    partial class categoeries
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,12 +67,6 @@ namespace BETGaming.Server.Migrations
                         {
                             Id = 4,
                             Name = "Role-playing (RPG, ARPG, and More)",
-                            Url = "https://www.giantbomb.com/a/uploads/scale_medium/9/97089/2256747-4.png"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Electronics",
                             Url = "https://www.giantbomb.com/a/uploads/scale_medium/9/97089/2256747-4.png"
                         });
                 });
@@ -142,105 +139,6 @@ namespace BETGaming.Server.Migrations
                             ImageURL = "images/4.png",
                             Price = 4.0m,
                             Title = "Game 4"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CategoryId = 5,
-                            Description = "The latest iPhone with a 6.1-inch Super Retina XDR display.",
-                            ImageURL = "https://example.com/iphone12.jpg",
-                            Price = 799.00m,
-                            Title = "Apple iPhone 12"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CategoryId = 5,
-                            Description = "The latest Samsung flagship with a 6.2-inch Dynamic AMOLED 2X display.",
-                            ImageURL = "https://example.com/samsungs21.jpg",
-                            Price = 799.00m,
-                            Title = "Samsung Galaxy S21"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CategoryId = 5,
-                            Description = "A budget-friendly phone from Google with a 5.8-inch OLED display.",
-                            ImageURL = "https://example.com/pixel4a.jpg",
-                            Price = 349.00m,
-                            Title = "Google Pixel 4a"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CategoryId = 5,
-                            Description = "A high-performance phone with a 6.55-inch Fluid AMOLED display.",
-                            ImageURL = "https://example.com/oneplus8t.jpg",
-                            Price = 749.00m,
-                            Title = "OnePlus 8T"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CategoryId = 5,
-                            Description = "The latest gaming console from Sony with 8K graphics and ray tracing.",
-                            ImageURL = "https://example.com/ps5.jpg",
-                            Price = 499.00m,
-                            Title = "Sony PlayStation 5"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CategoryId = 5,
-                            Description = "The latest gaming console from Microsoft with 4K graphics and 120fps.",
-                            ImageURL = "https://example.com/xboxseriesx.jpg",
-                            Price = 499.00m,
-                            Title = "Microsoft Xbox Series X"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CategoryId = 5,
-                            Description = "A portable gaming console from Nintendo with a 6.2-inch capacitive touchscreen.",
-                            ImageURL = "https://example.com/switch.jpg",
-                            Price = 299.00m,
-                            Title = "Nintendo Switch"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CategoryId = 5,
-                            Description = "A 4K OLED TV with AI ThinQ and Google Assistant built-in.",
-                            ImageURL = "https://example.com/lgoledcx.jpg",
-                            Price = 1499.00m,
-                            Title = "LG OLED CX Series TV"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CategoryId = 5,
-                            Description = "A 8K QLED TV with Quantum Processor 8K and Alexa built-in.",
-                            ImageURL = "https://example.com/samsungqn900a.jpg",
-                            Price = 2999.00m,
-                            Title = "Samsung QN900A Series TV"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CategoryId = 5,
-                            Description = "A 4K OLED TV with Acoustic Surface Audio and Android TV built-in.",
-                            ImageURL = "https://example.com/sonya8h.jpg",
-                            Price = 1499.00m,
-                            Title = "Sony A8H Series TV"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CategoryId = 5,
-                            Description = "A high-performance laptop with a 14-inch display and long battery life.",
-                            ImageURL = "https://example.com/thinkpadx1carbon.jpg",
-                            Price = 1499.00m,
-                            Title = "Lenovo ThinkPad X1 Carbon"
                         });
                 });
 

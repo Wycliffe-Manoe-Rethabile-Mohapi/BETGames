@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BETGaming.Shared
 {
-    public  class Cathegory
+    public  class Category
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
