@@ -1,17 +1,17 @@
 /* /Pages/ProductDetails.razor.rz.scp.css */
 media-img[b-g4laendlak]{
-    max-height: 500px;
-    max-width:500px;
+    max-height: 100px;
+    max-width:100px;
     border-radius:6px;
     margin:0 10px 10px 10px;
 
 }
 media-img-wrapper[b-g4laendlak] {
-    max-height: 500px;
-    max-width: 500px;
+    max-height: 100px;
+    max-width: 100px;
     text-align:center;
 }
-@media (max-width:1023.98px){
+@media (max-width:500.98px){
     .media-img[b-g4laendlak]{
         max-width:300px;
     }
@@ -175,7 +175,7 @@ main[b-m1euvzlyzi] {
 }
 
     .media-img:hover[b-k11xe30hnn]{
-        transform:scale(1:1);
+        transform:scale(1:2);
     }
 .media-img-wrapper[b-k11xe30hnn]{
     width:200px;

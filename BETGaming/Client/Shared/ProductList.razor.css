@@ -7,7 +7,7 @@
 }
 
     .media-img:hover{
-        transform:scale(1:1);
+        transform:scale(1:2);
     }
 .media-img-wrapper{
     width:200px;
