@@ -15,7 +15,11 @@ namespace BETGaming.Server.Services.ProductService
         public async Task<ServiceResponse<Product>> GetProductAsync(int productId)
         {
             var response = new ServiceResponse<Product>();
-            var product = await _context.Products.FindAsync(productId);
+            var product = await _context.Products
+                .Include(s=>s.Variants)
+                .ThenInclude(s=>s.ProductType)
+                .FirstOrDefaultAsync(s=>s.Id== productId);
+
             if (product==null)
             {
                 response.Success = false;
@@ -33,7 +37,9 @@ namespace BETGaming.Server.Services.ProductService
         public async Task<ServiceResponse<List<Product>>> GetProductsAsync()
         {
             var response = new ServiceResponse<List<Product>>() {
-                Data= await _context.Products.ToListAsync()
+                Data= await _context.Products
+                .Include(s => s.Variants)
+                .ToListAsync()
             };
 
             return response;
@@ -43,7 +49,9 @@ namespace BETGaming.Server.Services.ProductService
         {
             var response = new ServiceResponse<List<Product>>()
             {
-                Data =  await _context.Products.Where(s => s.Category.Url.ToLower().Equals(categoryUrl.ToLower())).ToListAsync()
+                Data =  await _context.Products.Where(s => s.Category.Url.ToLower().Equals(categoryUrl.ToLower()))
+                .Include(s => s.Variants)
+                .ToListAsync()
             };
 
             return response;

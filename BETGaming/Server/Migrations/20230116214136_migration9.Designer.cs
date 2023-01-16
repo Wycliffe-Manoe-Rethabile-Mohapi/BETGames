@@ -3,6 +3,7 @@ using BETGaming.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BETGaming.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230116214136_migration9")]
+    partial class migration9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,31 +49,31 @@ namespace BETGaming.Server.Migrations
                         {
                             Id = 1,
                             Name = "Sandbox",
-                            Url = "Sandbox"
+                            Url = "https://play-lh.googleusercontent.com/QS31MR9QEDSRV4V8qro8YtwT72OvUJJPpWrgyqDLwNgLcEGDe2D7EJnakRJRIhYWUw"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Shooters",
-                            Url = "Shooters"
+                            Name = "Shooters (FPS and TPS)",
+                            Url = "https://www.denofgeek.com/wp-content/uploads/2021/07/Far-Cry-2.jpg"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Multiplayer",
-                            Url = "Multiplayer"
+                            Name = "Multiplayer online battle arena (MOBA)",
+                            Url = "https://i.ytimg.com/vi/lD-nWRWo7NU/maxresdefault.jpg"
                         },
                         new
                         {
                             Id = 4,
-                            Name = "Role-playing",
-                            Url = "Role-playing"
+                            Name = "Role-playing (RPG, ARPG, and More)",
+                            Url = "https://www.giantbomb.com/a/uploads/scale_medium/9/97089/2256747-4.png"
                         },
                         new
                         {
                             Id = 5,
                             Name = "Electronics",
-                            Url = "Electronics"
+                            Url = "https://www.giantbomb.com/a/uploads/scale_medium/9/97089/2256747-4.png"
                         });
                 });
 
@@ -109,7 +112,7 @@ namespace BETGaming.Server.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Description = "The first game",
-                            ImageURL = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/01/Best-FPS-Games.jpg",
+                            ImageURL = "images/3.png",
                             Title = "Game 1"
                         },
                         new
@@ -117,7 +120,7 @@ namespace BETGaming.Server.Migrations
                             Id = 2,
                             CategoryId = 2,
                             Description = "The second game",
-                            ImageURL = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/01/Best-FPS-Games.jpg",
+                            ImageURL = "images/4.png",
                             Title = "Game 2"
                         },
                         new
@@ -125,7 +128,7 @@ namespace BETGaming.Server.Migrations
                             Id = 3,
                             CategoryId = 3,
                             Description = "the third game",
-                            ImageURL = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/01/Best-FPS-Games.jpg",
+                            ImageURL = "images/3.png",
                             Title = "Game 3"
                         },
                         new
@@ -133,7 +136,7 @@ namespace BETGaming.Server.Migrations
                             Id = 4,
                             CategoryId = 4,
                             Description = "The fourth game",
-                            ImageURL = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/01/Best-FPS-Games.jpg",
+                            ImageURL = "images/4.png",
                             Title = "Game 4"
                         },
                         new
@@ -141,7 +144,7 @@ namespace BETGaming.Server.Migrations
                             Id = 5,
                             CategoryId = 5,
                             Description = "The latest iPhone with a 6.1-inch Super Retina XDR display.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/iphone12.jpg",
                             Title = "Apple iPhone 12"
                         },
                         new
@@ -149,7 +152,7 @@ namespace BETGaming.Server.Migrations
                             Id = 6,
                             CategoryId = 5,
                             Description = "The latest Samsung flagship with a 6.2-inch Dynamic AMOLED 2X display.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/samsungs21.jpg",
                             Title = "Samsung Galaxy S21"
                         },
                         new
@@ -157,7 +160,7 @@ namespace BETGaming.Server.Migrations
                             Id = 7,
                             CategoryId = 5,
                             Description = "A budget-friendly phone from Google with a 5.8-inch OLED display.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/pixel4a.jpg",
                             Title = "Google Pixel 4a"
                         },
                         new
@@ -165,7 +168,7 @@ namespace BETGaming.Server.Migrations
                             Id = 8,
                             CategoryId = 5,
                             Description = "A high-performance phone with a 6.55-inch Fluid AMOLED display.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/oneplus8t.jpg",
                             Title = "OnePlus 8T"
                         },
                         new
@@ -173,7 +176,7 @@ namespace BETGaming.Server.Migrations
                             Id = 9,
                             CategoryId = 5,
                             Description = "The latest gaming console from Sony with 8K graphics and ray tracing.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/ps5.jpg",
                             Title = "Sony PlayStation 5"
                         },
                         new
@@ -181,7 +184,7 @@ namespace BETGaming.Server.Migrations
                             Id = 10,
                             CategoryId = 5,
                             Description = "The latest gaming console from Microsoft with 4K graphics and 120fps.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/xboxseriesx.jpg",
                             Title = "Microsoft Xbox Series X"
                         },
                         new
@@ -197,7 +200,7 @@ namespace BETGaming.Server.Migrations
                             Id = 12,
                             CategoryId = 5,
                             Description = "A 4K OLED TV with AI ThinQ and Google Assistant built-in.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/lgoledcx.jpg",
                             Title = "LG OLED CX Series TV"
                         },
                         new
@@ -205,7 +208,7 @@ namespace BETGaming.Server.Migrations
                             Id = 13,
                             CategoryId = 5,
                             Description = "A 8K QLED TV with Quantum Processor 8K and Alexa built-in.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/samsungqn900a.jpg",
                             Title = "Samsung QN900A Series TV"
                         },
                         new
@@ -213,7 +216,7 @@ namespace BETGaming.Server.Migrations
                             Id = 14,
                             CategoryId = 5,
                             Description = "A 4K OLED TV with Acoustic Surface Audio and Android TV built-in.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "https://example.com/sonya8h.jpg",
                             Title = "Sony A8H Series TV"
                         },
                         new
@@ -221,7 +224,7 @@ namespace BETGaming.Server.Migrations
                             Id = 16,
                             CategoryId = 1,
                             Description = "The highly-anticipated sequel to the critically-acclaimed game.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "The Last of Us Part II"
                         },
                         new
@@ -237,7 +240,7 @@ namespace BETGaming.Server.Migrations
                             Id = 18,
                             CategoryId = 1,
                             Description = "An action RPG set in a post-apocalyptic world ruled by robotic creatures.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Horizon Zero Dawn"
                         },
                         new
@@ -245,7 +248,7 @@ namespace BETGaming.Server.Migrations
                             Id = 19,
                             CategoryId = 1,
                             Description = "An epic tale of life in America's unforgiving heartland.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Red Dead Redemption 2"
                         },
                         new
@@ -253,7 +256,7 @@ namespace BETGaming.Server.Migrations
                             Id = 20,
                             CategoryId = 1,
                             Description = "An open-world action RPG based on the bestselling fantasy series.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "The Witcher 3: Wild Hunt"
                         },
                         new
@@ -261,7 +264,7 @@ namespace BETGaming.Server.Migrations
                             Id = 21,
                             CategoryId = 1,
                             Description = "An action game developed by Hideo Kojima, creator of the Metal Gear series.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Death Stranding"
                         },
                         new
@@ -269,7 +272,7 @@ namespace BETGaming.Server.Migrations
                             Id = 22,
                             CategoryId = 1,
                             Description = "An open-air adventure game set in a vast wilderness.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "The Legend of Zelda: Breath of the Wild"
                         },
                         new
@@ -277,7 +280,7 @@ namespace BETGaming.Server.Migrations
                             Id = 23,
                             CategoryId = 1,
                             Description = "A 3D platformer featuring Mario's first sandbox-style gameplay.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Super Mario Odyssey"
                         },
                         new
@@ -285,7 +288,7 @@ namespace BETGaming.Server.Migrations
                             Id = 24,
                             CategoryId = 1,
                             Description = "A role-playing game that follows a group of high school students.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Persona 5"
                         },
                         new
@@ -301,7 +304,7 @@ namespace BETGaming.Server.Migrations
                             Id = 26,
                             CategoryId = 1,
                             Description = "A game where players take on the role of a hunter and slay different monsters",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Monster Hunter: World"
                         },
                         new
@@ -309,7 +312,7 @@ namespace BETGaming.Server.Migrations
                             Id = 27,
                             CategoryId = 1,
                             Description = "A team-based first-person shooter game developed by Blizzard Entertainment.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Overwatch"
                         },
                         new
@@ -317,7 +320,7 @@ namespace BETGaming.Server.Migrations
                             Id = 28,
                             CategoryId = 1,
                             Description = "A sandbox game where players can build and explore virtual worlds.",
-                            ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg",
+                            ImageURL = "",
                             Title = "Minecraft"
                         });
                 });
@@ -386,13 +389,6 @@ namespace BETGaming.Server.Migrations
                         {
                             ProductId = 1,
                             ProductTypeId = 1,
-                            OriginalPrice = 5m,
-                            Price = 10m
-                        },
-                        new
-                        {
-                            ProductId = 1,
-                            ProductTypeId = 2,
                             OriginalPrice = 5m,
                             Price = 10m
                         },

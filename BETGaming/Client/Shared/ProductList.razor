@@ -20,9 +20,9 @@ else
                     <a href="/product/@product.Id">
                         <h4 class="mb-0">@product.Title</h4>
                         <p>@product.Description</p>
-                        @*<h5 class="price">
-                            R @product.Price
-                        </h5>*@
+                        <h5 class="price">
+                            @GetPriceText(product)
+                        </h5>
                     </a>
                 </div>
             </li>
@@ -43,5 +43,20 @@ else
     {
         ProductService.ProductsChanged -= StateHasChanged;
     }
+    private string GetPriceText(Product product)
+    {
+        var variants = product.Variants;
 
+        if (variants.Count==0)
+        {
+            return string.Empty;
+        }
+        else if (variants.Count == 1)
+        {
+            return $"${variants[0].Price}";
+        }
+
+        decimal minPrice = variants.Min(s => s.Price);
+        return $"Starting at ${minPrice}";
+    }
 }
