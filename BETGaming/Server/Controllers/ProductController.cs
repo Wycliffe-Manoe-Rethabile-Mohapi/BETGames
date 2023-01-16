@@ -8,21 +8,19 @@ namespace BETGaming.Server.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly IProductService _ProductService;
 
-        public ProductController(DataContext dataContext)
+        public ProductController(IProductService ProductService)
         {
-            this._context = dataContext;
+            this._ProductService = ProductService;
         }
 
 
         [HttpGet]
         public  async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
-            var products = await _context.Products.ToListAsync();
-            var response = new ServiceResponse<List<Product>>() { };
-            response.Data = products;
-            return  Ok(response);
+            var result = await _ProductService.GetProductsAsync();
+            return  Ok(result);
         }
     }
 }

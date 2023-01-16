@@ -1,10 +1,7 @@
+global using BETGaming.Server.Services.ProductService;
 global using BETGaming.Shared;
 global using Microsoft.EntityFrameworkCore;
-global using Microsoft.EntityFrameworkCore.Design;
-using Arch.EntityFrameworkCore;
 using BETGaming.Server.Data;
-using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +13,8 @@ builder.Services.AddRazorPages();
 //swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 IConfiguration configuration = new ConfigurationBuilder()
    .AddJsonFile("appsettings.json", true, true)
