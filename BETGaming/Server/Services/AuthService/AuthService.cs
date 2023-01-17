@@ -32,7 +32,7 @@ namespace BETGaming.Server.Services.AuthService
             _Context.Users.Add(user);
             await _Context.SaveChangesAsync();
 
-            return new ServiceResponse<int>() { Data = user.Id, Success = true };
+            return new ServiceResponse<int>() { Data = user.Id, Success = true ,Message = "Registration Successful"};
         }
 
         public async Task<bool> UserExists(string email)
