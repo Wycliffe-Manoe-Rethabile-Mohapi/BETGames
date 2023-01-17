@@ -3,6 +3,7 @@ global  using System.Net.Http.Json;
 global using BETGaming.Client.Services.ProductService;
 global using BETGaming.Client.Services.CategoryService;
 global using BETGaming.Client.Services.AuthService;
+global using Microsoft.AspNetCore.Components.Authorization;
 
 using BETGaming.Client;
 using Microsoft.AspNetCore.Components.Web;
@@ -19,6 +20,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddBlazoredLocalStorage();
-
+builder.Services.AddOptions();
+builder.Services.AddAuthorizationCore();
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
 await builder.Build().RunAsync();

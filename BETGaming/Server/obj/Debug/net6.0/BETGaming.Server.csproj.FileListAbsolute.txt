@@ -119,3 +119,4 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\System.N
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
