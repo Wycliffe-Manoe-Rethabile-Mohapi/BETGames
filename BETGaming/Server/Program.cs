@@ -2,6 +2,7 @@ global using BETGaming.Server.Services.ProductService;
 global using BETGaming.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using BETGaming.Server.Services.CategoryService;
+global using BETGaming.Server.Services.AuthService;
 using BETGaming.Server.Data;
 
 
@@ -18,6 +19,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 IConfiguration configuration = new ConfigurationBuilder()
    .AddJsonFile("appsettings.json", true, true)
