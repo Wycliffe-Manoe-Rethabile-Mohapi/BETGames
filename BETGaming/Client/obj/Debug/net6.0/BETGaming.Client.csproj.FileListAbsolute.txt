@@ -876,3 +876,7 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\xDfv3x89.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\DzAov9h3.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Pages\ProductDetails.razor.rz.scp.css
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\UserButton.razor.rz.scp.css
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\ShopLayout.razor.rz.scp.css
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\ShopNavMenu.razor.rz.scp.css
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\HomeButton.razor.rz.scp.css
