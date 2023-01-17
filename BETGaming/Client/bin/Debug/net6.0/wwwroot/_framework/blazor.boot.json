@@ -11,6 +11,7 @@
       "Arch.EntityFrameworkCore.Abstractions.dll": "sha256-NAbUXSxgrF\/SFp5pvvBLp5H5\/+dxGMfuNvLB\/4\/yhQM=",
       "Arch.EntityFrameworkCore.Design.dll": "sha256-HvflJjtTnGVkcsQs23Tc6VIEZixDjloHkMaf+O05rtU=",
       "Arch.EntityFrameworkCore.Relational.dll": "sha256-vVQS0RbW+G9eFP\/Gd+M6WwNZcXRpYvMlznwG3QISCoc=",
+      "Blazored.LocalStorage.dll": "sha256-Jq\/dS58mO5wtL2d0x\/FeAdDZ1bUTpTzPODJpBZUre\/4=",
       "System.Net.Http.Formatting.dll": "sha256-xQBIin4YpqDObdqwau\/5dr8XQEq54hlxV4gBgNtUqbc=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-XBf6Fkkj3RbYzEYJK50myG8AEUvn0E0yo79DWqFFF6s=",
       "Microsoft.AspNetCore.Components.dll": "sha256-UkZxt\/OLN+4go5yeFeBuXEx05BEm9nw5pNpR7smgtq4=",
@@ -208,14 +209,14 @@
       "netstandard.dll": "sha256-\/CRbZZ6en3BoMsR5fhsJCTE9TYhik+E7KU+O9cBdC9c=",
       "System.Private.CoreLib.dll": "sha256-ftEeXsH4HQ3J6VlVJuI3mbfqZxGyNtYVxuIQD\/8waHw=",
       "BETGaming.Shared.dll": "sha256-sUERLXQ+3PHwaN3akU0VNahA2mlVkMClFlXyULyR1I0=",
-      "BETGaming.Client.dll": "sha256-NAcp96glZzCnF8Ulo2ydF2RSo\/+rL6It2YUTGEbzkwA="
+      "BETGaming.Client.dll": "sha256-+UI3q+BDIqZqLi8wE\/VpBJ8Dk27Ml4FzPUsM17EHE3M="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "BETGaming.Shared.pdb": "sha256-ocRyt+VIopSYaDCzPCUhoX3nSmbz11j7J83W\/WRG3vE=",
-      "BETGaming.Client.pdb": "sha256-Xx\/\/FpDi6IhK9LuQOdsBefme5+MdOPg\/59nRDqZVzM0="
+      "BETGaming.Client.pdb": "sha256-xlGPv3baIsnhoBKngbsCpAgeikiYkpu84KoRWHW\/rtw="
     },
     "runtime": {
       "dotnet.6.0.12.4qctxxjh2g.js": "sha256-qD0QxS71qYTQZMj+JDk0IXr28ewa+pSDzShFKSNkQ+0=",

@@ -1,5 +1,6 @@
 ﻿@page "/register"
 @inject IAuthService AuthService
+@inject NavigationManager NavigationManager
 
 <PageTitle>Register</PageTitle>
 
@@ -41,11 +42,13 @@
 
         if (!results.Success)
         {
-            messageCssClass = "text-success";
+            messageCssClass = "text-danger";
+            Message = results.Message;
         }
         else
         {
-            messageCssClass = "text-danger";
+            messageCssClass = "text-success";
+            Message = results.Message;
         }
     }
 }

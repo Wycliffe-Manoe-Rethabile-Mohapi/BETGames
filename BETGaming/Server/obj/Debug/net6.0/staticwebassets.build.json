@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RiZnWH9TRPQy5WlUM720gC4S+BGa3zyQeO3ObaLKtEE=",
+  "Hash": "n4Nveirt0O1v3DUkA1DFxav/6Lv5UcAOP3/VEma8Ye4=",
   "Source": "BETGaming.Server",
   "BasePath": "_content/BETGaming.Server",
   "Mode": "Default",
@@ -197,6 +197,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.11\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\blazored.localstorage\\4.3.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.12.4qctxxjh2g.js",
@@ -4005,6 +4022,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Collections.NonGeneric.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\47G+UM4I.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\4VHRgtMs.gz",

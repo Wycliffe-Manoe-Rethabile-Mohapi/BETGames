@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "53BSqoSbCkKRyhoqOdcItFOxX3Q3FIQPbzR2zq1E+e74Fxuzy0HL5vLBGdws7kbg4+sfYxS2sH2tyiHx02Zn+Q==",
+  "dgSpecHash": "aPrcLK4UZNskSyqfbKGiA3Zm3jTb8q1gEtL5DuoHkO8Nj0gnkld1Ne3QV6JTEj50Yiruz/OOwRPvERXBfjQ0kQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Server\\BETGaming.Server.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.relational\\2.1.15\\arch.entityframeworkcore.relational.2.1.15.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\mohap\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\microsoft.aspnetcore.authorization.6.0.11.nupkg.sha512",

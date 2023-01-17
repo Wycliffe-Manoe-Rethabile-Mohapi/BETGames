@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KwF3geZKxy8am6do2mtlDPPjokXHsVvoG+uFV+OA1GUrR5eOjmzVHgu+c3FpokrxzFG5OBwUgJCuT/6+FvZ6Dw==",
+  "dgSpecHash": "yBoypotOFQHNLOrByW5jDx/K6Pmvab1zDjaZ33zyDtpb3rzPmBqrgKcuzt88aG8lohMlD0XaHVQHfhBoOi02bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\BETGaming.Client.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.analyzers\\2.1.15\\arch.entityframeworkcore.analyzers.2.1.15.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.design\\2.1.15\\arch.entityframeworkcore.design.2.1.15.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\arch.entityframeworkcore.relational\\2.1.15\\arch.entityframeworkcore.relational.2.1.15.nupkg.sha512",
+    "C:\\Users\\mohap\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\microsoft.aspnetcore.authorization.6.0.11.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.11\\microsoft.aspnetcore.components.6.0.11.nupkg.sha512",

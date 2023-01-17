@@ -118,3 +118,4 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\obj\Debug\net6.0\ref\BETG
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll

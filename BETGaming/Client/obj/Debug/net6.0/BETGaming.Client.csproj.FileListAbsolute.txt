@@ -880,3 +880,7 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcs
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\ShopLayout.razor.rz.scp.css
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\ShopNavMenu.razor.rz.scp.css
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Shared\HomeButton.razor.rz.scp.css
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\47G+UM4I.gz

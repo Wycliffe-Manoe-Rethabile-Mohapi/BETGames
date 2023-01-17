@@ -34,7 +34,7 @@ namespace BETGaming.Server.Controllers
 
             if (!response.Success)
             {
-                return BadRequest(request);
+                return BadRequest(response);
             }
             return Ok(response);
         }

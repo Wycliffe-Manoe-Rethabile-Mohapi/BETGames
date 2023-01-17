@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[2.1.15, )"
             },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
               "version": "[5.2.9, )"

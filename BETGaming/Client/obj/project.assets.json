@@ -76,6 +76,18 @@
           }
         }
       },
+      "Blazored.LocalStorage/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.9": {
         "type": "package",
         "dependencies": {
@@ -2303,6 +2315,18 @@
           "lib/netstandard2.0/Arch.EntityFrameworkCore.Relational.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Blazored.LocalStorage/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.9": {
@@ -4541,6 +4565,20 @@
         "arch.entityframeworkcore.relational.nuspec",
         "lib/netstandard2.0/Arch.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.0/Arch.EntityFrameworkCore.Relational.xml"
+      ]
+    },
+    "Blazored.LocalStorage/4.3.0": {
+      "sha512": "CfHp9SWN45cM/TM8uw4pELQBfCRtMssCMSOjsEXVWibeYBn36TLpzw+J1vsC2Su2BEQ3Et19A5+GqK1S3kHbTQ==",
+      "type": "package",
+      "path": "blazored.localstorage/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.4.3.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/net6.0/Blazored.LocalStorage.dll",
+        "lib/net7.0/Blazored.LocalStorage.dll"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.9": {
@@ -9830,6 +9868,7 @@
     "net6.0": [
       "Arch.EntityFrameworkCore.Design >= 2.1.15",
       "BETGaming.Shared >= 1.0.0",
+      "Blazored.LocalStorage >= 4.3.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.9",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.11",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.11"
@@ -9887,6 +9926,10 @@
           "Arch.EntityFrameworkCore.Design": {
             "target": "Package",
             "version": "[2.1.15, )"
+          },
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "Microsoft.AspNet.WebApi.Client": {
             "target": "Package",
