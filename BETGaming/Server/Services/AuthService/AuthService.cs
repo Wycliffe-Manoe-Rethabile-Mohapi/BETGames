@@ -1,14 +1,21 @@
 ﻿using BETGaming.Server.Data;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace BETGaming.Server.Services.AuthService
 {
     public class AuthService : IAuthService
     {
         public DataContext _Context { get; }
-        public AuthService(DataContext context)
+        public IConfiguration _Configuration { get; }
+
+        public AuthService(DataContext context, IConfiguration configuration)
         {
             _Context = context;
+            _Configuration = configuration;
         }
 
         
@@ -51,6 +58,66 @@ namespace BETGaming.Server.Services.AuthService
                 passwordSalt = hmac.Key;
                 passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
+        }
+
+        public async Task<ServiceResponse<string>> Login(string email, string password)
+        {
+            var response = new ServiceResponse<string>();
+
+            var user =  _Context.Users.FirstOrDefault(s=>s.Email.ToLower().Equals(email.ToLower()));
+            if (user == null) 
+            {
+                response.Success = false;
+                response.Message = "User not found.";
+            }
+            else if(!VerifyPasswordHash(password, user.PaswordHash, user.PasswordSalt))
+            {
+                response.Success = false;
+                response.Message = "Incrorrect username and password combination";
+            }
+            else
+            {
+                response.Data = CreateToken(user);
+            }
+
+            return response;
+        }
+
+        private bool VerifyPasswordHash(string password, byte[] paswordHash, byte[] passwordSalt)
+        {
+            using (var hmac = new HMACSHA512(passwordSalt))
+            {
+                var computedHash =
+                        hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                return computedHash.SequenceEqual(paswordHash);
+            }   
+        }
+
+        private string CreateToken(User user)
+        {
+            List<Claim> claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
+                new Claim(ClaimTypes.Name,user.Email)
+            };
+
+            var key = new SymmetricSecurityKey(
+                    System.Text.Encoding.UTF8
+                        .GetBytes(_Configuration.GetSection("AppSettings:SecurityKey").Value));
+
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var token = new JwtSecurityToken(
+
+                claims: claims,
+                expires:DateTime.Now.AddDays(1),
+                signingCredentials: creds
+                );
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return jwt;
         }
     }
 }

@@ -14,7 +14,6 @@ namespace BETGaming.Server.Controllers
         }
 
         [HttpPost("register")]
-
         public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegister request)
         {
             var response  = await _AuthService.Register(new Shared.User() { Email = request.Email }
@@ -25,6 +24,18 @@ namespace BETGaming.Server.Controllers
                 return BadRequest(response);
             }
 
+            return Ok(response);
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<ServiceResponse<string>>> Login(UserLogin request)
+        {
+            var response = await _AuthService.Login(request.Email, request.Password);
+
+            if (!response.Success)
+            {
+                return BadRequest(request);
+            }
             return Ok(response);
         }
     }
