@@ -1,20 +1,50 @@
 ﻿@page "/cart"
 @inject ICartService CartService
 
+<PageTitle>Shopping Cart</PageTitle>
+@if (cartProducts == null || cartProducts.Count==0)
+{
+    <span>@message</span>
+}
+else
+{
+    <div>
+        @foreach (var product in cartProducts)
+        {
+            <div class="container">
+                <div class="image-wrapper">
+                    <img src="@product.ImageUrl" class="image" />
+                </div>
+                <div class="name">
+                    <h5><a href="/product/@product.ProdictId">@product.Title</a></h5>
+                    <span>@product.ProductType</span>
+                </div>
+                <div class="cart-product-price">
+                    R @product.Price
+                </div>
+            </div>
+        }
+        <div class="cart-product-price">
+            Total (@cartProducts.Count): R @cartProducts.Sum(s=>s.Price)
+        </div>
+    </div>
+}
 
-@code {
+@code 
+{
     List<CartProductResponse> cartProducts = null;
-    string nessage = "loading Cart...";
+    string message = "loading Cart...";
 
     protected override async Task OnInitializedAsync()
     {
         if ((await CartService.GetCartItemsAsync()).Count==0)
         {
-            nessage = "Your cart does not have any products in it.";
+            message = "Your cart does not have any products in it.";
+            cartProducts = new List<CartProductResponse>();
         }
         else
         {
-            
+            cartProducts = await CartService.GetCartProductsAsync();
         }
     }
 }

@@ -4,7 +4,7 @@ global using Microsoft.EntityFrameworkCore;
 global using BETGaming.Server.Services.CategoryService;
 global using BETGaming.Server.Services.AuthService;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
-global using BETGaming.Client.Services.CartService;
+global using BETGaming.Server.Services.CartService;
 
 using BETGaming.Server.Data;
 using System.Security.Cryptography;
@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddTransient<ICartService,CartService>();
+builder.Services.AddScoped<ICartService,CartService>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

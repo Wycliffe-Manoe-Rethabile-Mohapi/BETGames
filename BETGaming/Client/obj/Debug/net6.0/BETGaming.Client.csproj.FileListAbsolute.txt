@@ -896,3 +896,4 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Microsof
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\+XaMQYB+.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\KhRsdHLk.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\scopedcss\Pages\Cart.razor.rz.scp.css
