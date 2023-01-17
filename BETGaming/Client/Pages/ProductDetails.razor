@@ -1,5 +1,6 @@
 ﻿@page "/product/{id:int}"
 @inject IProductService ProductService
+@inject ICartService CartService
 
 
 @if (product==null)
@@ -13,13 +14,35 @@ else
             <img class="media-img" src="@product.ImageURL" alt="@product.Title" />
         </div>
         <div class="media-body">
-            <a href="#">
-                <h2 class="mb-0">@product.Title</h2>
-                <p>@product.Description</p>
+            <h2 class="mb-0">@product.Title</h2>
+            <p>@product.Description</p>
+            @if (product.Variants != null && product.Variants.Count > 1)
+            {
+                <div>
+                    <select class="form-select" @bind="currentTypeId">
+                        @foreach (var variant in product.Variants)
+                        {
+                            <option value="@variant.ProductTypeId"> @variant.ProductType.Name</option>
+                        }
+                    </select>
+                </div>
+            }
+            @if (GetSelectedVariant()!=null)
+            {
+                @if (GetSelectedVariant().OriginalPrice>GetSelectedVariant().Price)
+                {
+                    <h6 class="text-muted original-price">
+                        $@GetSelectedVariant().OriginalPrice
+                    </h6>
+                }
                 <h4 class="price">
-                    @GetPriceText(product)
+                    $@GetSelectedVariant().Price
                 </h4>
-            </a>
+                
+            }
+            <button class="btn btn-primary" @onclick="AddToCart">
+                <i class="oi oi-cart"></i>&nbsp;&nbsp;&nbsp;Add to Cart
+            </button>
         </div>
     </div>
     
@@ -29,6 +52,7 @@ else
 {
     private Product? product = null;
     public string Message { get; set; }
+    public int currentTypeId { get; set; }
 
     [Parameter]
     public int Id { get; set; }
@@ -46,6 +70,10 @@ else
         else
         {
             product = result.Data;
+            if (product.Variants.Count>0)
+            {
+                currentTypeId = product.Variants[0].ProductTypeId;
+            }
         }
     }
 
@@ -64,5 +92,21 @@ else
 
         decimal minPrice = variants.Min(s => s.Price);
         return $"Starting at ${minPrice}";
+    }
+
+    private ProductVariant GetSelectedVariant()
+    {
+        var variant = product.Variants.FirstOrDefault(s => s.ProductTypeId == currentTypeId);
+        return variant;
+    }
+    private async Task AddToCart()
+    {
+        var selectedVariant = GetSelectedVariant();
+        var carItem = new CartItem()
+        {
+                ProductId = selectedVariant.ProductId,
+                ProductypeId = selectedVariant.ProductTypeId
+        };
+        await CartService.AddCartItem(carItem);
     }
 }

@@ -4,12 +4,14 @@ global using BETGaming.Client.Services.ProductService;
 global using BETGaming.Client.Services.CategoryService;
 global using BETGaming.Client.Services.AuthService;
 global using Microsoft.AspNetCore.Components.Authorization;
+global using BETGaming.Client.Services.CartService;
 
 using BETGaming.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Authorization;
 using Blazored.LocalStorage;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -19,6 +21,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddOptions();
 builder.Services.AddAuthorizationCore();
