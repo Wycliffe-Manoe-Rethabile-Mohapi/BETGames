@@ -1,0 +1,20 @@
+﻿@page "/cart"
+@inject ICartService CartService
+
+
+@code {
+    List<CartProductResponse> cartProducts = null;
+    string nessage = "loading Cart...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if ((await CartService.GetCartItemsAsync()).Count==0)
+        {
+            nessage = "Your cart does not have any products in it.";
+        }
+        else
+        {
+            
+        }
+    }
+}

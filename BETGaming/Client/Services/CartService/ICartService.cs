@@ -7,5 +7,7 @@
         Task<List<CartItem>> GetCartItemsAsync();
 
         Task AddCartItem(CartItem cartItem);
+
+        Task<List<CartProductResponse>> GetCartProductsAsync();
     }
 }

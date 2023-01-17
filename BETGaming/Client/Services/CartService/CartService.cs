@@ -1,16 +1,19 @@
-﻿using Blazored.LocalStorage;
+﻿using BETGaming.Shared;
+using Blazored.LocalStorage;
 
 namespace BETGaming.Client.Services.CartService
 {
     public class CartService : ICartService
     {
         public ILocalStorageService _LocalStorage { get; }
+        public HttpClient _HttpClient { get; }
 
         public event Action OnChange;
 
-        public CartService(ILocalStorageService LocalStorage)
+        public CartService(ILocalStorageService LocalStorage, HttpClient httpClient)
         {
             this._LocalStorage = LocalStorage;
+            _HttpClient = httpClient;
         }
 
         
@@ -43,6 +46,15 @@ namespace BETGaming.Client.Services.CartService
 
             }
             return cart;
+        }
+
+        public async Task<List<CartProductResponse>> GetCartProductsAsync()
+        {
+            var cartitems = await GetCartItemsAsync();
+            var response = await _HttpClient.PostAsJsonAsync("api/cart/products", cartitems);
+            var result   =  await response.Content.ReadFromJsonAsync<ServiceResponse<List<CartProductResponse>>>();
+
+            return result.Data;
         }
     }
 }
