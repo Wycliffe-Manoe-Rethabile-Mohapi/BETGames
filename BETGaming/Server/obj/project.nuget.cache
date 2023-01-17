@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sn8YGa6WuAJi4j+vV4CW0GuCZQuF/HEBV52k7aKSxYDjAOC4I1hS9upk0ZiFm3BENsouPQZd7cNVfp2dyIVC9Q==",
+  "dgSpecHash": "YhDTJdxfebt+ZrDaIaw89oSwNA2QiPalrV08S5WSBrkHoAK+smeWceruOdjFlogp9o4wq38GC07YWnBusxIDaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Server\\BETGaming.Server.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\mohap\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
+    "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.13\\microsoft.aspnetcore.authentication.jwtbearer.6.0.13.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.13\\microsoft.aspnetcore.authorization.6.0.13.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.13\\microsoft.aspnetcore.components.6.0.13.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.13\\microsoft.aspnetcore.components.analyzers.6.0.13.nupkg.sha512",
@@ -23,6 +24,7 @@
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.11\\microsoft.aspnetcore.components.webassembly.6.0.11.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.11\\microsoft.aspnetcore.components.webassembly.server.6.0.11.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.13\\microsoft.aspnetcore.metadata.6.0.13.nupkg.sha512",
+    "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
@@ -62,6 +64,7 @@
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.jsinterop\\6.0.11\\microsoft.jsinterop.6.0.11.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.11\\microsoft.jsinterop.webassembly.6.0.11.nupkg.sha512",
+    "C:\\Users\\mohap\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\mohap\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

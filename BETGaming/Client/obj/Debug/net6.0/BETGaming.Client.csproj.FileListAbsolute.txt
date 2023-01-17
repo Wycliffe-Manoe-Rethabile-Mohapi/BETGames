@@ -888,3 +888,11 @@ C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\xLYzbXL1.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\n5WDhv+1.gz
 C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\IUGfv8LA.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\+XaMQYB+.gz
+C:\Users\mohap\source\repos\BETGaming\BETGaming\Client\obj\Debug\net6.0\build-gz\KhRsdHLk.gz

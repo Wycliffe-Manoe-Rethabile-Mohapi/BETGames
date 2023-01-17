@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "//rVca8iPHAye2mZ7+6aBwuNVTdCafm7hkjFkFSqVMc=",
+  "Hash": "3hjn+x/BGqn0IDx/EAXYnFQ2fkTOUIcNPQmlLuMUAPU=",
   "Source": "BETGaming.Server",
   "BasePath": "_content/BETGaming.Server",
   "Mode": "Default",
@@ -454,6 +454,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.13\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\lib\\netstandard2.0\\Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -775,6 +792,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.11\\lib\\net6.0\\Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\lib\\netstandard2.0\\Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll",
@@ -3820,6 +3854,23 @@
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.Serialization.Xml.dll"
     },
     {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+XaMQYB+.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\+zd64gyO.gz",
       "SourceId": "BETGaming.Client",
       "SourceType": "Project",
@@ -5467,6 +5518,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.dll"
+    },
+    {
+      "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\KhRsdHLk.gz",
+      "SourceId": "BETGaming.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "C:\\Users\\mohap\\source\\repos\\BETGaming\\BETGaming\\Client\\obj\\Debug\\net6.0\\build-gz\\kj3MaxBd.gz",

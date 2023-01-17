@@ -1,4 +1,5 @@
 ﻿using BETGaming.Shared;
+using Remotion.Linq.Clauses.ResultOperators;
 
 namespace BETGaming.Client.Services.AuthService
 {
@@ -20,8 +21,13 @@ namespace BETGaming.Client.Services.AuthService
         public async Task<ServiceResponse<string>> Login(UserLogin userLogin)
         {
             var response = await _HttpClient.PostAsJsonAsync("api/auth/login", userLogin);
-            var result =  await response.Content.ReadFromJsonAsync<ServiceResponse<string>>();
-            return result;
+            return  await response.Content.ReadFromJsonAsync<ServiceResponse<string>>();
+        }
+
+        public async Task<ServiceResponse<bool>> ChangePassword(UserChangePassword userChangePassword)
+        {
+            var response = await _HttpClient.PostAsJsonAsync("api/auth/change-password", userChangePassword.Password);
+            return await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
         }
     }
 }

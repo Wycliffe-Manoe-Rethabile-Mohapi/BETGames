@@ -1,4 +1,5 @@
 ﻿using BETGaming.Server.Data;
+using BETGaming.Shared;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -118,6 +119,34 @@ namespace BETGaming.Server.Services.AuthService
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
             return jwt;
+        }
+
+        public async Task<ServiceResponse<bool>> ChangePassword(int userId, string newPassword)
+        {
+            var user = await _Context.Users.FindAsync(userId);
+
+            if (user==null)
+            {
+                return new ServiceResponse<bool>()
+                {
+                    Success = false
+                };
+            }
+
+            CreatePasswordHash(newPassword, out byte[] hash, out byte[] salt);
+
+            user.PaswordHash = hash;
+            user.PasswordSalt = salt;
+
+
+            var response = await _Context.SaveChangesAsync();
+
+            return new ServiceResponse<bool>()
+            {
+                Success = true,
+                Data=true,
+                Message = "Password has been changed."
+            };
         }
     }
 }
