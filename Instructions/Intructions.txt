@@ -1,0 +1,33 @@
+BET Gaming Online Store
+
+Requirements
+
+1 Internet connection
+2 SQl server
+3 Dot net core 6
+4 database was created on sql 2022
+
+Running the Application
+
+1 Change the connection string in the appsettings to point to your server and database
+2.Restore nuget packages from nuget package manager
+
+OPTION1 
+2.0 from visual studio run the migrations like below
+2.1 Delete the current migrations folder under the server project
+2.2 run migrastions commands below
+2.2.1 dotnet ef migrations add YourMigrationname
+2.2.2 dotnet ef database update
+3. Once the above is completed run the solution using visual studio
+
+OPTION2 
+restore the attached database tio your sql server
+change the connection string in the appsettings of the server project on the code to point to your database
+make sure you can connect to the database 
+Once the above is completed run the solution using visual studio
+
+OPTION3
+excecute the sql scripts on your sql server
+change the connection string in the appsettings of the server project on the code to point to your database
+make sure you can connect to the database 
+Once the above is completed run the solution using visual studio

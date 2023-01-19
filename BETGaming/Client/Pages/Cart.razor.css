@@ -1,6 +1,23 @@
-﻿.image{
-    max-width:10px;
+﻿.container{
+    display:flex;
+    padding:6px;
+}
+.image{
+    max-height:150px;
+    max-width:150px;
 }
 .image-wrapper {
-    max-width: 10px;
+    max-width: 200px;
+    width:150px;
+    text-align:center;
 }
+
+.name{
+    flex-grow:1;
+    padding:6px;
+}
+.cart-product-price{
+    font-weight:600;
+    text-align:right;
+}
+
