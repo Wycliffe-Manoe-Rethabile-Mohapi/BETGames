@@ -17,7 +17,8 @@ else
                 </div>
                 <div class="name">
                     <h5><a href="/product/@product.ProdictId">@product.Title</a></h5>
-                    <span>@product.ProductType</span>
+                    <span>@product.ProductType</span><br/>
+                    <button class="btn-delete" @onclick="@(()=> RemoveProductFromCart(product.ProdictId,product.ProductTypeId))">Remove Item</button>
                 </div>
                 <div class="cart-product-price">
                     R @product.Price
@@ -37,7 +38,18 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        if ((await CartService.GetCartItemsAsync()).Count==0)
+        await LoadCart();
+    }
+
+    public async Task RemoveProductFromCart(int productId,int productTypeId)
+    {
+        await CartService.RemoveProductFromCart(productId, productTypeId);
+
+        await LoadCart();
+    }
+    private async Task LoadCart()
+    {
+        if ((await CartService.GetCartItemsAsync()).Count == 0)
         {
             message = "Your cart does not have any products in it.";
             cartProducts = new List<CartProductResponse>();

@@ -56,5 +56,27 @@ namespace BETGaming.Client.Services.CartService
 
             return result.Data;
         }
+
+        public async Task RemoveProductFromCart(int productId, int productTypeid)
+        {
+            var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+            if (cart==null)
+            {
+                return;
+            }
+
+            var cartItem = cart.Find(s => s.ProductId == productId && s.ProductypeId == productTypeid);
+            if (cartItem!=null)
+            {
+                cart.Remove(cartItem);
+                await _LocalStorage.SetItemAsync("cart", cart);
+
+                if (OnChange != null)
+                {
+                    OnChange.Invoke();
+                }
+            }
+            
+        }
     }
 }

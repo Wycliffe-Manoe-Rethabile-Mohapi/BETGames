@@ -20,4 +20,15 @@
     font-weight:600;
     text-align:right;
 }
+.btn-delete[b-6v4f9jeeup]{
+    background:none;
+    border:none;
+    padding:0px;
+    color:red;
+    font-size:12px;
+
+}
+    .btn-delete:hover[b-6v4f9jeeup]{
+        text-decoration:underline;
+    }
 
