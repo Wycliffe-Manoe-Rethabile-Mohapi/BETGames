@@ -56,5 +56,16 @@ namespace BETGaming.Server.Services.ProductService
 
             return response;
         }
+
+        public async Task<ServiceResponse<List<Product>>> SearchProductsAsync(string searchText)
+        {
+            var response = new ServiceResponse<List<Product>>();
+
+            var result = await _context.Products.Where(s => s.Title.ToLower().Contains(searchText.ToLower()) || s.Description.ToLower().Contains(searchText.ToLower()))
+                .Include(s => s.Variants)
+                .ToListAsync();
+            response.Data = result;
+            return response;
+        }
     }
 }

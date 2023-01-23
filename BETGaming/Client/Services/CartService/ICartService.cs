@@ -9,6 +9,9 @@
         Task AddCartItem(CartItem cartItem);
 
         Task<List<CartProductResponse>> GetCartProductsAsync();
+
         Task RemoveProductFromCart(int productId, int productTypeid);
+
+        Task UpdateQuantity(CartProductResponse cartProductResponse);
     }
 }

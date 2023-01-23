@@ -27,7 +27,16 @@ namespace BETGaming.Client.Services.CartService
 
             }
 
-            cart.Add (cartItem);
+            var sameItem = cart.Find(s=>s.ProductId==cartItem.ProductId && s.ProductypeId==cartItem.ProductypeId);
+
+            if (sameItem==null)
+            {
+                cart.Add(cartItem);
+            }
+            else
+            {
+                sameItem.Quantity+= cartItem.Quantity;
+            }
 
             await _LocalStorage.SetItemAsync("cart", cart);
 
@@ -69,6 +78,7 @@ namespace BETGaming.Client.Services.CartService
             if (cartItem!=null)
             {
                 cart.Remove(cartItem);
+
                 await _LocalStorage.SetItemAsync("cart", cart);
 
                 if (OnChange != null)
@@ -77,6 +87,24 @@ namespace BETGaming.Client.Services.CartService
                 }
             }
             
+        }
+
+        public async Task UpdateQuantity(CartProductResponse product)
+        {
+            var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+            if (cart == null)
+            {
+                return;
+            }
+
+            var cartItem = cart.Find(s => s.ProductId == product.ProdictId && s.ProductypeId == product.ProductTypeId);
+            if (cartItem != null)
+            {
+                cartItem.Quantity = product.Quantity;
+
+                await _LocalStorage.SetItemAsync("cart", cart);
+
+            }
         }
     }
 }

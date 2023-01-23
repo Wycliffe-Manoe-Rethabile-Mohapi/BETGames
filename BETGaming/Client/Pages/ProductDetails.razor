@@ -103,10 +103,11 @@ else
     {
         var selectedVariant = GetSelectedVariant();
         var carItem = new CartItem()
-        {
+            {
                 ProductId = selectedVariant.ProductId,
-                ProductypeId = selectedVariant.ProductTypeId
-        };
+                ProductypeId = selectedVariant.ProductTypeId,
+                Quantity = 1
+    };
         await CartService.AddCartItem(carItem);
     }
 }

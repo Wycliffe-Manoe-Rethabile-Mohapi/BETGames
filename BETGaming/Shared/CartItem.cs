@@ -10,5 +10,6 @@ namespace BETGaming.Shared
     {
         public int ProductId { get; set; }
         public int ProductypeId { get; set; }
+        public int Quantity { get; set; } = 1;
     }
 }
