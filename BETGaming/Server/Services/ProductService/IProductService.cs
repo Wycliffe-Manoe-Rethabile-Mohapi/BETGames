@@ -10,5 +10,7 @@ namespace BETGaming.Server.Services.ProductService
         Task<ServiceResponse<Product>> GetProductAsync(int productId);
         Task<ServiceResponse<List<Product>>> GetProductsByCategoryAsync(string CategoryUrl);
         Task<ServiceResponse<List<Product>>> SearchProductsAsync(string searchText);
+        Task<ServiceResponse<List<String>>> GetProductSearchSuggestions(string searchText);
+
     }
 }

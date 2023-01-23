@@ -212,14 +212,14 @@
       "netstandard.dll": "sha256-\/CRbZZ6en3BoMsR5fhsJCTE9TYhik+E7KU+O9cBdC9c=",
       "System.Private.CoreLib.dll": "sha256-ftEeXsH4HQ3J6VlVJuI3mbfqZxGyNtYVxuIQD\/8waHw=",
       "BETGaming.Shared.dll": "sha256-fW5tfQA3TYebPITsMBqLpR6L2RTbfMKX6qvKelPouIA=",
-      "BETGaming.Client.dll": "sha256-jLgpTvGkAjPKmZCRAPtzHG9lAaddCIHMAohUGZXGK44="
+      "BETGaming.Client.dll": "sha256-iyjLHa+RIXJ2fMAWb4f7DAXEPEb4ZGKLDRpDJMCbEdI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "BETGaming.Shared.pdb": "sha256-u1lGClawbAx\/8cAiZNnxORjJ3yr\/blHWxPKdswWTztA=",
-      "BETGaming.Client.pdb": "sha256-fetBsarKHDaYKKS9xePvz1p1meODenZapqtEDEODct0="
+      "BETGaming.Client.pdb": "sha256-dn0H0Ndk4c9lseOEkS\/nT1abnqpw3\/eg3wHhyp97v94="
     },
     "runtime": {
       "dotnet.6.0.12.4qctxxjh2g.js": "sha256-qD0QxS71qYTQZMj+JDk0IXr28ewa+pSDzShFKSNkQ+0=",

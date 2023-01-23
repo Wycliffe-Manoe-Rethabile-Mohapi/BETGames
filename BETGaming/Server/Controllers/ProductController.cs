@@ -46,5 +46,13 @@ namespace BETGaming.Server.Controllers
             return Ok(result);
 
         }
+
+        [HttpGet("searchsuggestions/{searchString}")]
+        public async Task<ActionResult<ServiceResponse<List<string>>>> GetProductSearchSuggestions(string searchString)
+        {
+            var result = await _ProductService.GetProductSearchSuggestions(searchString);
+            return Ok(result);
+
+        }
     }
 }
