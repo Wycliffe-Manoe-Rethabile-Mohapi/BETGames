@@ -1,0 +1,65 @@
+﻿@inject IProductService ProductService
+@implements IDisposable
+<centre><h2>Top Products of Today<</h2></centre>
+
+@if (ProductService.Products == null || ProductService.Products.Count == 0)
+{
+    <span>@ProductService.Message</span>
+
+}
+else
+{
+    <Div class="container">
+        @foreach (var product in ProductService.Products)
+        {
+            @if (product.Featured)
+            {
+                <div class="featured-product">
+                    <div>
+                        <a href="product/@product.Id">
+                            <img src="@product.ImageURL"/>
+                        </a>
+                    </div>
+                    <h4><a href="product/@product.Id">@product.Title</a></h4>
+                    @if (product.Variants!=null && product.Variants.Count>0)
+                    {
+                        <h5 class="price">
+                            R @product.Variants[0].Price
+                        </h5>
+                    }
+                </div>
+            }
+        }
+    </Div>
+}
+
+
+@code {
+    private static List<Product> Products = new List<Product>();
+
+    protected override void OnInitialized()
+    {
+        ProductService.ProductsChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        ProductService.ProductsChanged -= StateHasChanged;
+    }
+    private string GetPriceText(Product product)
+    {
+        var variants = product.Variants;
+
+        if (variants.Count == 0)
+        {
+            return string.Empty;
+        }
+        else if (variants.Count == 1)
+        {
+            return $"${variants[0].Price}";
+        }
+
+        decimal minPrice = variants.Min(s => s.Price);
+        return $"Starting at ${minPrice}";
+    }
+}

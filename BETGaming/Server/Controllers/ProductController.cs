@@ -40,7 +40,7 @@ namespace BETGaming.Server.Controllers
         }
 
         [HttpGet("search/{searchString}")]
-        public async Task<ActionResult<ServiceResponse<List<Product>>>> SearchProductsAsync(string searchString)
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> SearchProduct(string searchString)
         {
             var result = await _ProductService.SearchProductsAsync(searchString);
             return Ok(result);
@@ -50,9 +50,16 @@ namespace BETGaming.Server.Controllers
         [HttpGet("searchsuggestions/{searchString}")]
         public async Task<ActionResult<ServiceResponse<List<string>>>> GetProductSearchSuggestions(string searchString)
         {
-            var result = await _ProductService.GetProductSearchSuggestions(searchString);
+            var result = await _ProductService.GetProductSearchSuggestionsAsync(searchString);
             return Ok(result);
 
+        }
+
+        [HttpGet("featured")]
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetFeaturedProducts()
+        {
+            var result = await _ProductService.GetFeaturedProductsAsync();
+            return Ok(result);
         }
     }
 }

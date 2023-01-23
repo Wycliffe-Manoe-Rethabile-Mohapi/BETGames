@@ -58,6 +58,33 @@
         height:auto;
     }
 }
+/* /Shared/Featured.razor.rz.scp.css */
+.media-img[b-5ku4q8u8zk]{
+    max-height: 200px;
+    max-width:200px;
+    border-radius:6px;
+    margin-bottom:10px;
+    transition: transform .2s;
+}
+
+    .media-img:hover[b-5ku4q8u8zk]{
+        transform:scale(1:2);
+    }
+.media-img-wrapper[b-5ku4q8u8zk]{
+    width:200px;
+    text-align:center;
+}
+
+@media (max-width:1023.98px){
+    .media[b-5ku4q8u8zk]{
+        flex-direction:column;
+    }
+
+    .media-img-wrapper[b-5ku4q8u8zk]{
+        width:100%;
+        height:auto;
+    }
+}
 /* /Shared/HomeButton.razor.rz.scp.css */
 .home-button[b-zzfs8pmggp]{
     white-space:nowrap;

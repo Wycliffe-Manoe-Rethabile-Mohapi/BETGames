@@ -89,7 +89,8 @@
                         Description = "The first game",
                         //Price = 1.0m,
                         ImageURL = "https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/01/Best-FPS-Games.jpg",
-                        CategoryId =1
+                        CategoryId =1,
+                        Featured=true
 
                     },
                         new Product()
@@ -122,7 +123,7 @@
                             CategoryId = 4
 
                         },
-                        new Product { Id = 5, Title = "Apple iPhone 12", Description = "The latest iPhone with a 6.1-inch Super Retina XDR display.", ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg", CategoryId = 5 },
+                        new Product { Id = 5, Title = "Apple iPhone 12", Description = "The latest iPhone with a 6.1-inch Super Retina XDR display.", ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg", CategoryId = 5,Featured=true },
                         new Product { Id = 6, Title = "Samsung Galaxy S21", Description = "The latest Samsung flagship with a 6.2-inch Dynamic AMOLED 2X display.", ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg", CategoryId = 5 },
                         new Product { Id = 7, Title = "Google Pixel 4a", Description = "A budget-friendly phone from Google with a 5.8-inch OLED display.", ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg", CategoryId = 5 },
                         new Product { Id = 8, Title = "OnePlus 8T", Description = "A high-performance phone with a 6.55-inch Fluid AMOLED display.", ImageURL = "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_SL1500_.jpg", CategoryId = 5 },

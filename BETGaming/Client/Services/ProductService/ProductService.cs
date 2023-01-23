@@ -22,7 +22,7 @@ namespace BETGaming.Client.Services.ProductService
         public async Task GetProducts(string? categoryUrl = null)
         {
             var result = categoryUrl == null ?
-                await HttpClient.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/Product") :
+                await HttpClient.GetFromJsonAsync<ServiceResponse<List<Product>>>("api/Product/featured") :
                 await HttpClient.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/Product/category/{categoryUrl}");
 
             if (result != null && result.Data != null)

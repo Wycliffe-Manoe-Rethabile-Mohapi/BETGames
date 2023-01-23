@@ -14,6 +14,19 @@ namespace BETGaming.Server.Services.ProductService
             this._context = dataContext;
         }
 
+        public async Task<ServiceResponse<List<Product>>> GetFeaturedProductsAsync()
+        {
+            var response = new ServiceResponse<List<Product>>()
+            {
+                Data = await _context.Products
+                .Include(s => s.Variants)
+                .Where(s => s.Variants.Count > 0 && s.Featured==true)
+                .ToListAsync()
+            };
+
+            return response;
+        }
+
         public async Task<ServiceResponse<Product>> GetProductAsync(int productId)
         {
             var response = new ServiceResponse<Product>();
@@ -62,7 +75,7 @@ namespace BETGaming.Server.Services.ProductService
             return response;
         }
 
-        public async Task<ServiceResponse<List<string>>> GetProductSearchSuggestions(string searchText)
+        public async Task<ServiceResponse<List<string>>> GetProductSearchSuggestionsAsync(string searchText)
         {
             var products = await FindProductsBySearchTerm(searchText);
 
