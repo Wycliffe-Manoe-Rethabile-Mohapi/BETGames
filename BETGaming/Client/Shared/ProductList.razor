@@ -19,11 +19,11 @@ else
                 <div class="media-body">
                     <a href="/product/@product.Id">
                         <h4 class="mb-0">@product.Title</h4>
-                        <p>@product.Description</p>
-                        <h5 class="price">
-                            @GetPriceText(product)
-                        </h5>
                     </a>
+                    <p class="page-text">@product.Description</p>
+                    <h5 class="price">
+                        @GetPriceText(product)
+                    </h5>
                 </div>
             </li>
         }
