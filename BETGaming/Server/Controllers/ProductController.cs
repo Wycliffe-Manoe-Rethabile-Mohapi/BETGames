@@ -39,10 +39,10 @@ namespace BETGaming.Server.Controllers
             return Ok(result);
         }
 
-        [HttpGet("search/{searchString}")]
-        public async Task<ActionResult<ServiceResponse<List<Product>>>> SearchProduct(string searchString)
+        [HttpGet("search/{searchString}/{page}")]
+        public async Task<ActionResult<ServiceResponse<ProductSearchRespomse>>> SearchProduct(string searchString,int page=1)
         {
-            var result = await _ProductService.SearchProductsAsync(searchString);
+            var result = await _ProductService.SearchProductsAsync(searchString,page);
             return Ok(result);
 
         }

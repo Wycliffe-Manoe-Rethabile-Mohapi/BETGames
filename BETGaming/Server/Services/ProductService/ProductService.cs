@@ -113,11 +113,28 @@ namespace BETGaming.Server.Services.ProductService
             };
         }
 
-        public async Task<ServiceResponse<List<Product>>> SearchProductsAsync(string searchText)
+        public async Task<ServiceResponse<ProductSearchRespomse>> SearchProductsAsync(string searchText, int page)
         {
-            var response = new ServiceResponse<List<Product>>();
-            var products = await FindProductsBySearchTerm(searchText);
-            response.Data = products;
+            var pageResults = 2f;
+            var pageCount = Math.Ceiling((await FindProductsBySearchTerm(searchText)).Count/pageResults);
+
+            var products = await _context.Products.Where(s => s.Title.ToLower().Contains(searchText.ToLower()) || s.Description.ToLower().Contains(searchText.ToLower()))
+                            .Include(s => s.Variants)
+                            .Where(s => s.Variants.Count > 0)
+                            .Skip((page - 1) * (int)pageResults)
+                            .Take((int)pageResults)
+                            .ToListAsync();
+
+            var response = new ServiceResponse<ProductSearchRespomse>()
+            {
+                Data = new ProductSearchRespomse()
+                {
+                    Products= products,
+                    CurrentPage= page,
+                    Pages= (int)pageResults
+                }
+            };
+
             return response;
         }
 
