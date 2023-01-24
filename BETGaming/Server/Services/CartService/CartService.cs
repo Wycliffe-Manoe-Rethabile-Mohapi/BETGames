@@ -1,13 +1,17 @@
 ﻿using BETGaming.Server.Data;
+using System.Security.Claims;
 
 namespace BETGaming.Server.Services.CartService
 {
     public class CartService : ICartService
     {
         public DataContext _DataContext { get; }
-        public CartService(DataContext dataContext)
+        public IHttpContextAccessor _HttpContextAccessor { get; }
+
+        public CartService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
         {
             _DataContext = dataContext;
+            _HttpContextAccessor = httpContextAccessor;
         }
 
         
@@ -54,6 +58,33 @@ namespace BETGaming.Server.Services.CartService
             }
 
             return result;
+        }
+
+        public async Task<ServiceResponse<List<CartProductResponse>>> StoreCartItems(List<CartItem> cartItems)
+        {
+            var userId = GetUserId();
+
+            foreach (var cartitem in cartItems)
+            {
+                cartitem.UserId = userId;
+            }
+
+            _DataContext.CartItems.AddRange(cartItems);
+
+            await _DataContext.SaveChangesAsync();
+
+            return await GetCartProductsAsync(await _DataContext.CartItems.Where(s=>s.UserId== userId).ToListAsync());
+        }
+
+        private int GetUserId() => int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+        public async Task<ServiceResponse<int>> GetCartItemsCountAsync()
+        {
+            var count  =  _DataContext.CartItems.Count(s=>s.UserId==GetUserId());
+            return new ServiceResponse<int>()
+            {
+                Data = count
+            };
         }
     }
 }

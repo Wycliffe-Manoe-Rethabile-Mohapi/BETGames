@@ -933,19 +933,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-wosI5vs6c7rBynuswM\/BtxH7heELqPAU8XwiQSPAa+Q=",
+      "hash": "sha256-x5VWGuW61X8IncXqGk0vfSsdHhOhC1sEHr\/vqAQk7ag=",
       "url": "_framework\/BETGaming.Shared.dll"
     },
     {
-      "hash": "sha256-NuzMzanJop1csxG1nrsdbkOq\/RTM+ba5L+dJxsPu\/58=",
+      "hash": "sha256-TIr\/J7WYwePhDBGO9BSJX3os9pi01u9C3HVIF2MCIyg=",
       "url": "_framework\/BETGaming.Shared.pdb"
     },
     {
-      "hash": "sha256-KmpONbQt05rXYyTqgD6pePiGvNtgiAJU\/FRWB+STG7Q=",
+      "hash": "sha256-Yqtnf5GS9O7BYeYmZBLI4\/IYmO63IjGm9QdGYOwjcYQ=",
       "url": "_framework\/BETGaming.Client.dll"
     },
     {
-      "hash": "sha256-Xw7UBRtnzQ71h3tBZg4GlbUZ2Usx9ph+EM0u\/d5hIxA=",
+      "hash": "sha256-Wo0FekqYnKHviNXNI4cx6Sn9z\/rIMi1Dn9dqRbqgkWA=",
       "url": "_framework\/BETGaming.Client.pdb"
     },
     {
@@ -953,9 +953,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-SOd2tmefgt9HA5R6verP+8ZsbaPfaeFFTBpWY8dbBZg=",
+      "hash": "sha256-4rp8BLp5\/8JS1DvQ2uC4cout4hiXHBAsf1ziCDx44GY=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "67tGUXgV"
+  "version": "0rlIdSHT"
 };

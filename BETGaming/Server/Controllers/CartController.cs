@@ -1,6 +1,8 @@
-﻿using BETGaming.Server.Services.CartService;
+﻿using BETGaming.Server.Migrations;
+using BETGaming.Server.Services.CartService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using ICartService = BETGaming.Server.Services.CartService.ICartService;
 
 namespace BETGaming.Server.Controllers
@@ -21,6 +23,20 @@ namespace BETGaming.Server.Controllers
         public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> GetCartProducts(List<CartItem> cartItems)
         {
             var result = await CartService.GetCartProductsAsync(cartItems);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> StoreCartItems(List<CartItem> cartItems)
+        {
+            var result = await CartService.StoreCartItems(cartItems);
+            return Ok(result);
+        }
+
+        [HttpGet("count")]
+        public async Task<ActionResult<ServiceResponse<int>>> GetCartCount()
+        {
+            var result = await CartService.GetCartItemsCountAsync();
             return Ok(result);
         }
     }

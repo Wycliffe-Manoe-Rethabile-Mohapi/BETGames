@@ -1,49 +1,67 @@
 ﻿using BETGaming.Shared;
 using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace BETGaming.Client.Services.CartService
 {
-    public class CartService : ICartService
+    public class CartService : ICartSrvice
     {
         public ILocalStorageService _LocalStorage { get; }
         public HttpClient _HttpClient { get; }
+        public AuthenticationStateProvider _AuthenticationStateProvider { get; }
 
         public event Action OnChange;
 
-        public CartService(ILocalStorageService LocalStorage, HttpClient httpClient)
+        public CartService(ILocalStorageService LocalStorage, HttpClient httpClient,
+            AuthenticationStateProvider authenticationStateProvider)
         {
             this._LocalStorage = LocalStorage;
             _HttpClient = httpClient;
+            _AuthenticationStateProvider = authenticationStateProvider;
         }
 
         
 
         public async Task AddCartItem(CartItem cartItem)
         {
-            var cart = await _LocalStorage.GetItemAsync<List<CartItem>> ("cart");
+            if (await IsUserAuthenticated())
+            {
+                Console.WriteLine("Authenticated");
+            }
+            else
+            {
+                Console.WriteLine("not authenticated");
+            }
+
+            var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
             if (cart == null)
             {
                 cart = new List<CartItem>();
 
             }
 
-            var sameItem = cart.Find(s=>s.ProductId==cartItem.ProductId && s.ProductypeId==cartItem.ProductypeId);
+            var sameItem = cart.Find(s => s.ProductId == cartItem.ProductId && s.ProductypeId == cartItem.ProductypeId);
 
-            if (sameItem==null)
+            if (sameItem == null)
             {
                 cart.Add(cartItem);
             }
             else
             {
-                sameItem.Quantity+= cartItem.Quantity;
+                sameItem.Quantity += cartItem.Quantity;
             }
 
             await _LocalStorage.SetItemAsync("cart", cart);
 
-            if (OnChange!=null)
+            if (OnChange != null)
             {
                 OnChange.Invoke();
             }
+        }
+
+        private async Task<bool> IsUserAuthenticated()
+        {
+            return (await _AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
         public async Task<List<CartItem>> GetCartItemsAsync()
@@ -105,6 +123,29 @@ namespace BETGaming.Client.Services.CartService
                 await _LocalStorage.SetItemAsync("cart", cart);
 
             }
+        }
+
+        public async Task StoreCartItems(bool emptyLocalCart=false)
+        {
+            var localCart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+            if (localCart == null)
+            {
+                return;
+            }
+
+
+             await _HttpClient.PostAsJsonAsync("api/cart", localCart);
+
+            if (emptyLocalCart)
+            {
+                await _LocalStorage.RemoveItemAsync("cart");
+            }
+        }
+
+        public async Task<int> GetCartItemCount()
+        {
+            var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<int>>("api/cart/count");
+            return result.Data;
         }
     }
 }

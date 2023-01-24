@@ -1,6 +1,6 @@
 ﻿namespace BETGaming.Client.Services.CartService
 {
-    public interface ICartService
+    public interface ICartSrvice
     {
         event Action OnChange;
 
@@ -13,5 +13,8 @@
         Task RemoveProductFromCart(int productId, int productTypeid);
 
         Task UpdateQuantity(CartProductResponse cartProductResponse);
+
+        Task StoreCartItems(bool emptyLocalCart);
+        Task<int> GetcartItemCount();
     }
 }

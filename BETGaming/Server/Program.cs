@@ -37,6 +37,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     ValidateAudience=false
         });
 
+builder.Services.AddHttpContextAccessor();
+
 IConfiguration configuration = new ConfigurationBuilder()
    .AddJsonFile("appsettings.json", true, true)
    .Build();
