@@ -73,7 +73,7 @@ namespace BETGaming.Server.Services.CartService
 
             await _DataContext.SaveChangesAsync();
 
-            return await GetCartProductsAsync(await _DataContext.CartItems.Where(s=>s.UserId== userId).ToListAsync());
+            return await GetDatabaseCartProducts();
         }
 
         private int GetUserId() => int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -85,6 +85,11 @@ namespace BETGaming.Server.Services.CartService
             {
                 Data = count
             };
+        }
+
+        public async Task<ServiceResponse<List<CartProductResponse>>> GetDatabaseCartProducts()
+        {
+            return await GetCartProductsAsync( _DataContext.CartItems.Where(s=>s.UserId== GetUserId()).ToList());
         }
     }
 }

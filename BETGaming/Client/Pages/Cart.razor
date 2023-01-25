@@ -53,15 +53,14 @@ else
     }
     private async Task LoadCart()
     {
-        if ((await CartService.GetCartItemsAsync()).Count == 0)
+        await CartService.GetCartItemCount();
+        cartProducts = await CartService.GetCartProductsAsync();
+
+        if (cartProducts == null || cartProducts.Count==0)
         {
             message = "Your cart does not have any products in it.";
-            cartProducts = new List<CartProductResponse>();
         }
-        else
-        {
-            cartProducts = await CartService.GetCartProductsAsync();
-        }
+
     }
     private async Task UpdateQuantity(ChangeEventArgs e, CartProductResponse product)
     {

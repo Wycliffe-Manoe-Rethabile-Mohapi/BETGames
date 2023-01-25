@@ -1,6 +1,7 @@
 ﻿using BETGaming.Shared;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
+using System.Collections.Generic;
 
 namespace BETGaming.Client.Services.CartService
 {
@@ -53,10 +54,7 @@ namespace BETGaming.Client.Services.CartService
 
             await _LocalStorage.SetItemAsync("cart", cart);
 
-            if (OnChange != null)
-            {
-                OnChange.Invoke();
-            }
+            await GetCartItemCount();
         }
 
         private async Task<bool> IsUserAuthenticated()
@@ -64,24 +62,27 @@ namespace BETGaming.Client.Services.CartService
             return (await _AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
-        public async Task<List<CartItem>> GetCartItemsAsync()
-        {
-            var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
-            if (cart == null)
-            {
-                cart = new List<CartItem>();
-
-            }
-            return cart;
-        }
 
         public async Task<List<CartProductResponse>> GetCartProductsAsync()
         {
-            var cartitems = await GetCartItemsAsync();
-            var response = await _HttpClient.PostAsJsonAsync("api/cart/products", cartitems);
-            var result   =  await response.Content.ReadFromJsonAsync<ServiceResponse<List<CartProductResponse>>>();
+            if (await IsUserAuthenticated())
+            {
+                var response = await _HttpClient.GetFromJsonAsync<ServiceResponse<List<CartProductResponse>>>("api/cart");
+                return response.Data;
+            }
+            else
+            {
+                var cartitems = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+                if (cartitems == null)
+                    return new List<CartProductResponse>();
 
-            return result.Data;
+                var response = await _HttpClient.PostAsJsonAsync("api/cart/products", cartitems);
+                var result = await response.Content.ReadFromJsonAsync<ServiceResponse<List<CartProductResponse>>>();
+
+                return result.Data;
+            }
+            
+            
         }
 
         public async Task RemoveProductFromCart(int productId, int productTypeid)
@@ -99,10 +100,7 @@ namespace BETGaming.Client.Services.CartService
 
                 await _LocalStorage.SetItemAsync("cart", cart);
 
-                if (OnChange != null)
-                {
-                    OnChange.Invoke();
-                }
+                await GetCartItemCount();
             }
             
         }
@@ -142,10 +140,25 @@ namespace BETGaming.Client.Services.CartService
             }
         }
 
-        public async Task<int> GetCartItemCount()
+        public async Task GetCartItemCount()
         {
-            var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<int>>("api/cart/count");
-            return result.Data;
+            if (await IsUserAuthenticated())
+            {
+                var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<int>>("api/cart/count");
+                var count = result.Data;
+
+                await _LocalStorage.SetItemAsync<int>("cartItemsCount", count);
+            }
+            else
+            {
+                var localCart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+                await _LocalStorage.SetItemAsync<int>("cartItemsCount", localCart != null? localCart.Count:0);
+            }
+
+            if (OnChange != null)
+            {
+                OnChange.Invoke();
+            }
         }
     }
 }

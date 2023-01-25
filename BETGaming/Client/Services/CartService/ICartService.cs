@@ -4,7 +4,6 @@
     {
         event Action OnChange;
 
-        Task<List<CartItem>> GetCartItemsAsync();
 
         Task AddCartItem(CartItem cartItem);
 
@@ -15,6 +14,7 @@
         Task UpdateQuantity(CartProductResponse cartProductResponse);
 
         Task StoreCartItems(bool emptyLocalCart);
-        Task<int> GetcartItemCount();
+
+        Task GetCartItemCount();
     }
 }
