@@ -46,5 +46,12 @@ namespace BETGaming.Server.Controllers
             var result = await CartService.GetDatabaseCartProducts();
             return Ok(result);
         }
+
+        [HttpPost("add")]
+        public async Task<ActionResult<ServiceResponse<bool>>> AddToCart(CartItem cartitem)
+        {
+            var result = await CartService.AddToCart(cartitem);
+            return Ok(result);
+        }
     }
 }

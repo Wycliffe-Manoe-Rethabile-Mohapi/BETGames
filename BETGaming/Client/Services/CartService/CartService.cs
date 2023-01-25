@@ -27,32 +27,30 @@ namespace BETGaming.Client.Services.CartService
         {
             if (await IsUserAuthenticated())
             {
-                Console.WriteLine("Authenticated");
+                 await _HttpClient.PostAsJsonAsync("api/cart/add", cartItem);
             }
             else
             {
-                Console.WriteLine("not authenticated");
+                var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
+                if (cart == null)
+                {
+                    cart = new List<CartItem>();
+
+                }
+
+                var sameItem = cart.Find(s => s.ProductId == cartItem.ProductId && s.ProductypeId == cartItem.ProductypeId);
+
+                if (sameItem == null)
+                {
+                    cart.Add(cartItem);
+                }
+                else
+                {
+                    sameItem.Quantity += cartItem.Quantity;
+                }
+
+                await _LocalStorage.SetItemAsync("cart", cart);
             }
-
-            var cart = await _LocalStorage.GetItemAsync<List<CartItem>>("cart");
-            if (cart == null)
-            {
-                cart = new List<CartItem>();
-
-            }
-
-            var sameItem = cart.Find(s => s.ProductId == cartItem.ProductId && s.ProductypeId == cartItem.ProductypeId);
-
-            if (sameItem == null)
-            {
-                cart.Add(cartItem);
-            }
-            else
-            {
-                sameItem.Quantity += cartItem.Quantity;
-            }
-
-            await _LocalStorage.SetItemAsync("cart", cart);
 
             await GetCartItemCount();
         }

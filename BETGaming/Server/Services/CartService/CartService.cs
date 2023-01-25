@@ -91,5 +91,24 @@ namespace BETGaming.Server.Services.CartService
         {
             return await GetCartProductsAsync( _DataContext.CartItems.Where(s=>s.UserId== GetUserId()).ToList());
         }
+
+        public async Task<ServiceResponse<bool>> AddToCart(CartItem cartItem)
+        {
+            cartItem.UserId= GetUserId();
+
+            var dbcartItem = await  _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == cartItem.UserId && s.ProductypeId == cartItem.ProductypeId && s.ProductId == cartItem.ProductId);
+            if (dbcartItem == null)
+            {
+                _DataContext.CartItems.Add(cartItem);
+            }
+            else
+            {
+                dbcartItem.Quantity += cartItem.Quantity;
+            }
+
+            _DataContext.SaveChanges();
+
+            return new ServiceResponse<bool>(){ Data=true};
+        }
     }
 }

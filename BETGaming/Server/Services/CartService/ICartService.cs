@@ -6,5 +6,6 @@
         Task<ServiceResponse<List<CartProductResponse>>> StoreCartItems(List<CartItem> cartItems);
         Task<ServiceResponse<int>> GetCartItemsCountAsync();
         Task<ServiceResponse<List<CartProductResponse>>> GetDatabaseCartProducts();
+        Task<ServiceResponse<bool>> AddToCart(CartItem cartItem);
     }
 }
