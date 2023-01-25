@@ -15,7 +15,7 @@ namespace BETGaming.Shared
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string ImageURL { get; set; } = string.Empty;
-        [Column(TypeName = "decimal(18,4)")]
+        //[Column(TypeName = "decimal(18,4)")]
         public Category? Category { get; set; }
         public int CategoryId { get; set; }
         public bool Featured { get; set; } = false;

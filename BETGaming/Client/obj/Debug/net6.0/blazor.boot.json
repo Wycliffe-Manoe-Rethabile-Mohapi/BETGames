@@ -211,15 +211,15 @@
       "mscorlib.dll": "sha256-AtjrcSyN9gleNjzHPZRVJVh6sNEX1FxRBHN\/ZN6Yt3Q=",
       "netstandard.dll": "sha256-\/CRbZZ6en3BoMsR5fhsJCTE9TYhik+E7KU+O9cBdC9c=",
       "System.Private.CoreLib.dll": "sha256-ftEeXsH4HQ3J6VlVJuI3mbfqZxGyNtYVxuIQD\/8waHw=",
-      "BETGaming.Shared.dll": "sha256-x5VWGuW61X8IncXqGk0vfSsdHhOhC1sEHr\/vqAQk7ag=",
-      "BETGaming.Client.dll": "sha256-DdKEReO2Slh6XWvbaf72TSR6bsLEyn73U4wDUEHj7yM="
+      "BETGaming.Shared.dll": "sha256-E7uUCeRx3nCt6lg\/hjRz7d8isIzvjFKoXe\/7liRL\/1k=",
+      "BETGaming.Client.dll": "sha256-4InTGCCYzeB46O4Uwm0J0EKKCz5zrpV9VAZNEnfk\/9s="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BETGaming.Shared.pdb": "sha256-TIr\/J7WYwePhDBGO9BSJX3os9pi01u9C3HVIF2MCIyg=",
-      "BETGaming.Client.pdb": "sha256-HA0dVYHyVAcmEJb8OUEs6zkAE+4\/vEnaigQpbQxgw1w="
+      "BETGaming.Shared.pdb": "sha256-7lv0yIB5WruTKlDLzZVzNyaUaDi98Kv9CKEKESuxt2o=",
+      "BETGaming.Client.pdb": "sha256-IMrpzPxLpLtv9WL4JJyb\/5gqeghBH\/NU0WMvRq5pgCU="
     },
     "runtime": {
       "dotnet.6.0.12.4qctxxjh2g.js": "sha256-qD0QxS71qYTQZMj+JDk0IXr28ewa+pSDzShFKSNkQ+0=",
