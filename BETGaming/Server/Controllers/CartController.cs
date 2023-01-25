@@ -1,5 +1,6 @@
 ﻿using BETGaming.Server.Migrations;
 using BETGaming.Server.Services.CartService;
+using BETGaming.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -51,6 +52,20 @@ namespace BETGaming.Server.Controllers
         public async Task<ActionResult<ServiceResponse<bool>>> AddToCart(CartItem cartitem)
         {
             var result = await CartService.AddToCart(cartitem);
+            return Ok(result);
+        }
+
+        [HttpPut("update-quantity")]
+        public async Task<ActionResult<ServiceResponse<bool>>> UpdateQuantity(CartItem cartitem)
+        {
+            var result = await CartService.UpdateQuantity(cartitem);
+            return Ok(result);
+        }
+
+        [HttpDelete("{productId}/{productTypeId}")]
+        public async Task<ActionResult<ServiceResponse<bool>>> RemoveCartItem(int productId, int productTypeId)
+        {
+            var result = await CartService.RemoveCartItem(productId, productTypeId);
             return Ok(result);
         }
     }

@@ -110,5 +110,39 @@ namespace BETGaming.Server.Services.CartService
 
             return new ServiceResponse<bool>(){ Data=true};
         }
+
+        public async Task<ServiceResponse<bool>> UpdateQuantity(CartItem cartItem)
+        {
+            cartItem.UserId = GetUserId();
+
+            var dbcartItem = await _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == cartItem.UserId && s.ProductypeId == cartItem.ProductypeId && s.ProductId == cartItem.ProductId);
+            if (dbcartItem == null)
+            {
+                return new ServiceResponse<bool>() { Data = false ,Success=false,Message = "cart item does not exist"};
+            }
+
+            dbcartItem.Quantity = cartItem.Quantity;
+
+            _DataContext.SaveChanges();
+
+            return new ServiceResponse<bool>() { Data = true };
+        }
+
+        public async Task<ServiceResponse<bool>> RemoveCartItem(int productId, int productTypeId)
+        {
+
+            var dbcartItem = await _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == GetUserId() && s.ProductypeId == productTypeId && s.ProductId == productId);
+
+            if (dbcartItem == null)
+            {
+                return new ServiceResponse<bool>() { Data = false, Success = false, Message = "cart item does not exist" };
+            }
+
+            _DataContext.CartItems.Remove(dbcartItem);
+
+            _DataContext.SaveChanges();
+
+            return new ServiceResponse<bool>() { Data = true };
+        }
     }
 }

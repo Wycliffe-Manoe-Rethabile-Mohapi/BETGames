@@ -7,5 +7,7 @@
         Task<ServiceResponse<int>> GetCartItemsCountAsync();
         Task<ServiceResponse<List<CartProductResponse>>> GetDatabaseCartProducts();
         Task<ServiceResponse<bool>> AddToCart(CartItem cartItem);
+        Task<ServiceResponse<bool>> UpdateQuantity(CartItem cartItem);
+        Task<ServiceResponse<bool>> RemoveCartItem(int productId, int productTypeId);
     }
 }
