@@ -16,6 +16,8 @@
         public DbSet<ProductVariant> ProductVariants { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -152,6 +154,7 @@
                 );
             modelBuilder.Entity<ProductVariant>().HasKey(s => new { s.ProductId, s.ProductTypeId });
             modelBuilder.Entity< CartItem>().HasKey(s => new { s.UserId, s.ProductId,s.ProductypeId });
+            modelBuilder.Entity<OrderItem>().HasKey(s => new { s.OrderId, s.ProductId, s.ProductTypeId });
 
             modelBuilder.Entity<ProductVariant>().HasData
                 (
