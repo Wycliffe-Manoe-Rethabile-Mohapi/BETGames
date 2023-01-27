@@ -16,6 +16,45 @@ namespace BETGaming.Server.Services.OrderService
         public IAuthService _AuthService { get; }
         public ICartService _CartService { get; }
 
+        public async Task<ServiceResponse<OrderDetailsResponse>> GetOrderDetails(int orderId)
+        {
+            var response = new ServiceResponse<OrderDetailsResponse>();
+            var order = await _DataContext.Orders
+                            .Include(s => s.OrderItems)
+                            .ThenInclude(s => s.Product)
+                            .Include(s => s.OrderItems)
+                            .ThenInclude(s => s.ProductType)
+                            .Where(s => s.UserId == _AuthService.GetUserId() && s.Id == orderId)
+                            .OrderByDescending(s => s.OrderDate)
+                            .FirstOrDefaultAsync();
+            if (order==null)
+            {
+                response.Success = false;
+                response.Message = "order not found.";
+            }
+
+            var orderDetailsResponse = new OrderDetailsResponse()
+            {
+                OrderDate = order.OrderDate,
+                TotalPrice = order.TotalPrice,
+                Products = new List<OrderDetailsProductResponse>()
+
+            };
+            order.OrderItems.ForEach(s => orderDetailsResponse.Products.Add(new OrderDetailsProductResponse
+            {
+                ProductId = s.ProductId,
+                ImageUrl = s.Product.ImageURL,
+                ProductType = s.ProductType.Name,
+                TotalPrice= s.TotalPrice,
+                Quantity= s.Quantity,
+                Title = s.Product.Title
+            }));
+
+
+            response.Data = orderDetailsResponse;
+            return response;
+        }
+
         public async Task<ServiceResponse<List<OrderOverviewResponse>>> GetOrders()
         {
             var response = new ServiceResponse<List<OrderOverviewResponse>>();
@@ -35,7 +74,7 @@ namespace BETGaming.Server.Services.OrderService
                 OrderDate= s.OrderDate,
                 Totalprice = s.TotalPrice,
                 Product = s.OrderItems.Count > 1 ?
-                    $"{s.OrderItems.First().Product.Title} and" +
+                    $"{s.OrderItems.First().Product.Title} and " +
                     $"{s.OrderItems.Count-1} more...":
                     s.OrderItems.First().Product.Title,
                 ProductImageUrl = s.OrderItems.First().Product.ImageURL

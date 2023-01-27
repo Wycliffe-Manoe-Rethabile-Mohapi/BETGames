@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System.Collections.Generic;
 
 namespace BETGaming.Client.Services.OrderService
 {
@@ -31,6 +32,12 @@ namespace BETGaming.Client.Services.OrderService
                 _NavigationManager.NavigateTo("login");
             }
             
+        }
+
+        public async Task<List<OrderOverviewResponse>> GetOrders()
+        {
+            var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<List<OrderOverviewResponse>>>("api/order");
+            return result.Data;
         }
     }
 }
