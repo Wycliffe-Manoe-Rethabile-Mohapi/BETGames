@@ -20,5 +20,11 @@ namespace BETGaming.Server.Controllers
             var result = await _OrderServiuce.PlaceOrder();
             return Ok(result);
         }
+        [HttpGet]
+        public async Task<ActionResult<ServiceResponse<List<OrderOverviewResponse>>>> GetOrders()
+        {
+            var result = await _OrderServiuce.GetOrders();
+            return Ok(result);
+        }
     }
 }

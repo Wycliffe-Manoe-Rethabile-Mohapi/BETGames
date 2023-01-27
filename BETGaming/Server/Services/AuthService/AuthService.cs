@@ -1,5 +1,6 @@
 ﻿using BETGaming.Server.Data;
 using BETGaming.Shared;
+using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,11 +13,13 @@ namespace BETGaming.Server.Services.AuthService
     {
         public DataContext _Context { get; }
         public IConfiguration _Configuration { get; }
+        public IHttpContextAccessor _HttpContextAccessor { get; }
 
-        public AuthService(DataContext context, IConfiguration configuration)
+        public AuthService(DataContext context, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             _Context = context;
             _Configuration = configuration;
+            _HttpContextAccessor = httpContextAccessor;
         }
 
         
@@ -147,6 +150,11 @@ namespace BETGaming.Server.Services.AuthService
                 Data=true,
                 Message = "Password has been changed."
             };
+        }
+
+        public int GetUserId()
+        {
+            return int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
         }
     }
 }

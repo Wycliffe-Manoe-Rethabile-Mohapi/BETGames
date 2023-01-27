@@ -5,18 +5,44 @@ namespace BETGaming.Server.Services.OrderService
 {
     public class OrderService : IOrderService
     {
-        public OrderService(DataContext dataContext, IHttpContextAccessor httpContextAccessor, ICartService cartService)
+        public OrderService(DataContext dataContext, IAuthService authService, ICartService cartService)
         {
             _DataContext = dataContext;
-            _HttpContextAccessor = httpContextAccessor;
+            _AuthService = authService;
             _CartService = cartService;
         }
 
         public DataContext _DataContext { get; }
-        public IHttpContextAccessor _HttpContextAccessor { get; }
+        public IAuthService _AuthService { get; }
         public ICartService _CartService { get; }
 
-        private int GetUserId() => int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+        public async Task<ServiceResponse<List<OrderOverviewResponse>>> GetOrders()
+        {
+            var response = new ServiceResponse<List<OrderOverviewResponse>>();
+
+            var orders =  await  _DataContext.Orders
+                            .Include(s=>s.OrderItems)
+                            .ThenInclude(s=>s.Product)
+                            .Where(s=>s.UserId == _AuthService.GetUserId())
+                            .OrderByDescending(s=>s.OrderDate)
+                            .ToListAsync();
+
+            var orderviewresponse = new List<OrderOverviewResponse>();
+
+            orders.ForEach(s=> orderviewresponse.Add(new OrderOverviewResponse
+            {
+                Id = s.Id,
+                OrderDate= s.OrderDate,
+                Totalprice = s.TotalPrice,
+                Product = s.OrderItems.Count > 1 ?
+                    $"{s.OrderItems.First().Product.Title} and" +
+                    $"{s.OrderItems.Count-1} more...":
+                    s.OrderItems.First().Product.Title,
+                ProductImageUrl = s.OrderItems.First().Product.ImageURL
+            }));
+            response.Data = orderviewresponse;
+            return response; 
+        }
 
         public async Task<ServiceResponse<bool>> PlaceOrder()
         {
@@ -39,14 +65,17 @@ namespace BETGaming.Server.Services.OrderService
 
             var order = new Order()
             {
-                UserId= GetUserId(),
+                UserId= _AuthService.GetUserId(),
                 OrderDate = DateTime.Now,
                 OrderItems = orderItems,
                 TotalPrice= totalPrice,
             };
 
             _DataContext.Orders.Add( order );
-            _DataContext.SaveChangesAsync();
+
+            _DataContext.CartItems.RemoveRange(_DataContext.CartItems.Where(s=>s.UserId==_AuthService.GetUserId()));
+
+            await _DataContext.SaveChangesAsync();
 
             return new ServiceResponse<bool>() { Data = true };
         }

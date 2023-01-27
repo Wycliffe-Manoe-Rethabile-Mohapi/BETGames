@@ -6,12 +6,12 @@ namespace BETGaming.Server.Services.CartService
     public class CartService : ICartService
     {
         public DataContext _DataContext { get; }
-        public IHttpContextAccessor _HttpContextAccessor { get; }
+        public IAuthService _AuthService { get; }
 
-        public CartService(DataContext dataContext, IHttpContextAccessor httpContextAccessor)
+        public CartService(DataContext dataContext, IAuthService authService)
         {
             _DataContext = dataContext;
-            _HttpContextAccessor = httpContextAccessor;
+            _AuthService = authService;
         }
 
         
@@ -62,7 +62,7 @@ namespace BETGaming.Server.Services.CartService
 
         public async Task<ServiceResponse<List<CartProductResponse>>> StoreCartItems(List<CartItem> cartItems)
         {
-            var userId = GetUserId();
+            var userId =_AuthService.GetUserId();
 
             foreach (var cartitem in cartItems)
             {
@@ -76,11 +76,10 @@ namespace BETGaming.Server.Services.CartService
             return await GetDatabaseCartProducts();
         }
 
-        private int GetUserId() => int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
 
         public async Task<ServiceResponse<int>> GetCartItemsCountAsync()
         {
-            var count  =  _DataContext.CartItems.Count(s=>s.UserId==GetUserId());
+            var count  =  _DataContext.CartItems.Count(s=>s.UserId==_AuthService.GetUserId());
             return new ServiceResponse<int>()
             {
                 Data = count
@@ -89,12 +88,12 @@ namespace BETGaming.Server.Services.CartService
 
         public async Task<ServiceResponse<List<CartProductResponse>>> GetDatabaseCartProducts()
         {
-            return await GetCartProductsAsync( _DataContext.CartItems.Where(s=>s.UserId== GetUserId()).ToList());
+            return await GetCartProductsAsync( _DataContext.CartItems.Where(s=>s.UserId== _AuthService.GetUserId()).ToList());
         }
 
         public async Task<ServiceResponse<bool>> AddToCart(CartItem cartItem)
         {
-            cartItem.UserId= GetUserId();
+            cartItem.UserId= _AuthService.GetUserId();
 
             var dbcartItem = await  _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == cartItem.UserId && s.ProductypeId == cartItem.ProductypeId && s.ProductId == cartItem.ProductId);
             if (dbcartItem == null)
@@ -113,7 +112,7 @@ namespace BETGaming.Server.Services.CartService
 
         public async Task<ServiceResponse<bool>> UpdateQuantity(CartItem cartItem)
         {
-            cartItem.UserId = GetUserId();
+            cartItem.UserId = _AuthService.GetUserId();
 
             var dbcartItem = await _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == cartItem.UserId && s.ProductypeId == cartItem.ProductypeId && s.ProductId == cartItem.ProductId);
             if (dbcartItem == null)
@@ -131,7 +130,7 @@ namespace BETGaming.Server.Services.CartService
         public async Task<ServiceResponse<bool>> RemoveCartItem(int productId, int productTypeId)
         {
 
-            var dbcartItem = await _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == GetUserId() && s.ProductypeId == productTypeId && s.ProductId == productId);
+            var dbcartItem = await _DataContext.CartItems.FirstOrDefaultAsync(s => s.UserId == _AuthService.GetUserId() && s.ProductypeId == productTypeId && s.ProductId == productId);
 
             if (dbcartItem == null)
             {
