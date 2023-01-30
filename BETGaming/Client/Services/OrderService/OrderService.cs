@@ -39,5 +39,11 @@ namespace BETGaming.Client.Services.OrderService
             var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<List<OrderOverviewResponse>>>("api/order");
             return result.Data;
         }
+
+        public async Task<OrderDetailsResponse> GetOrderDetails(int orderId)
+        {
+            var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<OrderDetailsResponse>>($"api/order/{orderId}");
+            return result.Data;
+        }
     }
 }

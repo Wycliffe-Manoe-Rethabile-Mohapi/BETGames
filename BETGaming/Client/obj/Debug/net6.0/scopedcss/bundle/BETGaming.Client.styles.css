@@ -36,6 +36,36 @@
     width:78px;
 }
 
+/* /Pages/OrderDetails.razor.rz.scp.css */
+.container[b-smxkfaupjn] {
+    display: flex;
+    padding: 6px;
+    border: 1px solid;
+    border-color: lightgrey;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.image-wrapper[b-smxkfaupjn] {
+    width: 150px;
+    text-align: center;
+}
+
+.image[b-smxkfaupjn] {
+    max-height: 150px;
+    max-width: 150px;
+    padding: 6px;
+}
+
+.name[b-smxkfaupjn]{
+    flex-grow:1;
+    padding:6px;
+}
+.order-price[b-smxkfaupjn] {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: right;
+}
 /* /Pages/Orders.razor.rz.scp.css */
 .container[b-ny0r1k6jl0]{
     display:flex;
