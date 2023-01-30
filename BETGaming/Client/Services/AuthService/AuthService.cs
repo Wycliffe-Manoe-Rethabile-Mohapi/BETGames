@@ -3,12 +3,16 @@ using Remotion.Linq.Clauses.ResultOperators;
 
 namespace BETGaming.Client.Services.AuthService
 {
+
     public class AuthService : IAuthService
     {
         public HttpClient _HttpClient { get; }
-        public AuthService(HttpClient httpClient)
+        public CustomAuthStateProvider _AuthStateProvider { get; }
+
+        public AuthService(HttpClient httpClient, CustomAuthStateProvider AuthStateProvider)
         {
             _HttpClient = httpClient;
+            this._AuthStateProvider = AuthStateProvider;
         }
 
 
@@ -28,6 +32,11 @@ namespace BETGaming.Client.Services.AuthService
         {
             var response = await _HttpClient.PostAsJsonAsync("api/auth/change-password", userChangePassword.Password);
             return await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
+        }
+
+        public async Task<bool> IsUserAuthenticated()
+        {
+            return (await _AuthStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
     }
 }

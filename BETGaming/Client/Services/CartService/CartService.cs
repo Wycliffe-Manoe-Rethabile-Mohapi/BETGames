@@ -10,23 +10,24 @@ namespace BETGaming.Client.Services.CartService
     {
         public ILocalStorageService _LocalStorage { get; }
         public HttpClient _HttpClient { get; }
-        public AuthenticationStateProvider _AuthenticationStateProvider { get; }
+        //public AuthenticationStateProvider _AuthenticationStateProvider { get; }
+        public IAuthService _AuthService { get; }
 
         public event Action OnChange;
 
         public CartService(ILocalStorageService LocalStorage, HttpClient httpClient,
-            AuthenticationStateProvider authenticationStateProvider)
+            IAuthService AuthService)
         {
             this._LocalStorage = LocalStorage;
             _HttpClient = httpClient;
-            _AuthenticationStateProvider = authenticationStateProvider;
+            this._AuthService = AuthService;
         }
 
         
 
         public async Task AddCartItem(CartItem cartItem)
         {
-            if (await IsUserAuthenticated())
+            if (await _AuthService.IsUserAuthenticated())
             {
                  await _HttpClient.PostAsJsonAsync("api/cart/add", cartItem);
             }
@@ -56,15 +57,11 @@ namespace BETGaming.Client.Services.CartService
             await GetCartItemCount();
         }
 
-        private async Task<bool> IsUserAuthenticated()
-        {
-            return (await _AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
-        }
 
 
         public async Task<List<CartProductResponse>> GetCartProductsAsync()
         {
-            if (await IsUserAuthenticated())
+            if (await _AuthService.IsUserAuthenticated())
             {
                 var response = await _HttpClient.GetFromJsonAsync<ServiceResponse<List<CartProductResponse>>>("api/cart");
                 return response.Data;
@@ -86,7 +83,7 @@ namespace BETGaming.Client.Services.CartService
 
         public async Task RemoveProductFromCart(int productId, int productTypeid)
         {
-            if (await IsUserAuthenticated())
+            if (await _AuthService.IsUserAuthenticated())
             {
                 var response = await _HttpClient.DeleteAsync($"api/cart/{productId}/{productTypeid}");
                 var result = await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
@@ -116,7 +113,7 @@ namespace BETGaming.Client.Services.CartService
         public async Task UpdateQuantity(CartProductResponse product)
         {
 
-            if (await IsUserAuthenticated())
+            if (await _AuthService.IsUserAuthenticated())
             {
                 var request = new CartItem
                 {
@@ -168,7 +165,7 @@ namespace BETGaming.Client.Services.CartService
 
         public async Task GetCartItemCount()
         {
-            if (await IsUserAuthenticated())
+            if (await _AuthService.IsUserAuthenticated())
             {
                 var result = await _HttpClient.GetFromJsonAsync<ServiceResponse<int>>("api/cart/count");
                 var count = result.Data;
