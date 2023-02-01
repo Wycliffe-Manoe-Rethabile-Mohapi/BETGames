@@ -162,5 +162,10 @@ namespace BETGaming.Server.Services.AuthService
         {
             return _HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
         }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _Context.Users.FirstOrDefaultAsync(s => s.Email.ToLower().Equals(email.ToLower()));
+        }
     }
 }

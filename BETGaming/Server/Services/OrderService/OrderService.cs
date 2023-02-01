@@ -83,9 +83,9 @@ namespace BETGaming.Server.Services.OrderService
             return response; 
         }
 
-        public async Task<ServiceResponse<bool>> PlaceOrder()
+        public async Task<ServiceResponse<bool>> PlaceOrder(int userId)
         {
-            var products = (await _CartService.GetDatabaseCartProducts()).Data;
+            var products = (await _CartService.GetDatabaseCartProducts(userId)).Data;
 
             decimal totalPrice = products.Sum(s=>s.Price*s.Quantity);
 
@@ -104,7 +104,7 @@ namespace BETGaming.Server.Services.OrderService
 
             var order = new Order()
             {
-                UserId= _AuthService.GetUserId(),
+                UserId= userId,
                 OrderDate = DateTime.Now,
                 OrderItems = orderItems,
                 TotalPrice= totalPrice,
@@ -112,7 +112,7 @@ namespace BETGaming.Server.Services.OrderService
 
             _DataContext.Orders.Add( order );
 
-            _DataContext.CartItems.RemoveRange(_DataContext.CartItems.Where(s=>s.UserId==_AuthService.GetUserId()));
+            _DataContext.CartItems.RemoveRange(_DataContext.CartItems.Where(s=>s.UserId== userId));
 
             await _DataContext.SaveChangesAsync();
 

@@ -14,12 +14,7 @@ namespace BETGaming.Server.Controllers
 
         public IOrderService _OrderServiuce { get; }
 
-        [HttpPost]
-        public async Task<ActionResult<ServiceResponse<bool>>> PlaceOrder()
-        {
-            var result = await _OrderServiuce.PlaceOrder();
-            return Ok(result);
-        }
+ 
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<OrderOverviewResponse>>>> GetOrders()
         {

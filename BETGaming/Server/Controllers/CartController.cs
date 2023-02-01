@@ -44,7 +44,7 @@ namespace BETGaming.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> GetDatabaseProducts()
         {
-            var result = await CartService.GetDatabaseCartProducts();
+            var result = await CartService.GetDatabaseCartProducts(null);
             return Ok(result);
         }
 

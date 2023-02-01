@@ -20,5 +20,16 @@ namespace BETGaming.Server.Controllers
             var session = await _PaymentService.CreateCheckoutSession();
             return Ok(session.Url);
         }
+
+        [HttpPost()]
+        public async Task<ActionResult<ServiceResponse<bool>>> FulFillOrder()
+        {
+            var response = await _PaymentService.FullfillOrder(Request);
+            if (!response.Success)
+            {
+                return BadRequest(response.Message);
+            }
+            return Ok(response);
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace BETGaming.Server.Services.PaymentService
         public ICartService _CartService { get; }
         public IAuthService _AuthService { get; }
         public IOrderService _OrderService { get; }
+        const string secret = "whsec_fb06cb415058d17aa8dae43f2c8894d0e6073e42f40900f79c5ceab8ad1e8efc";
 
         public PaymentService( ICartService cartService,
                     IAuthService authService,
@@ -24,7 +25,7 @@ namespace BETGaming.Server.Services.PaymentService
 
         public async Task<Session> CreateCheckoutSession()
         {
-            var products = (await _CartService.GetDatabaseCartProducts()).Data;
+            var products = (await _CartService.GetDatabaseCartProducts(null)).Data;
             var lineItems = new List<SessionLineItemOptions>();
 
             foreach (var product in products)
@@ -62,6 +63,31 @@ namespace BETGaming.Server.Services.PaymentService
             var service = new SessionService();
             Session session =  service.Create(options);
             return session;
+        }
+
+        public async Task<ServiceResponse<bool>> FullfillOrder(HttpRequest httpRequest)
+        {
+            var json = await new StreamReader(httpRequest.Body).ReadToEndAsync();
+
+            try
+            {
+                var stripeEvent = EventUtility.ConstructEvent(json,
+                                            httpRequest.Headers["Stripe-Signature"],
+                                            secret);
+                if (stripeEvent.Type==Events.CheckoutSessionCompleted )
+                {
+                    var session = stripeEvent.Data.Object as Session;
+                    var user = await _AuthService.GetUserByEmail(session.CustomerEmail);
+
+                     await _OrderService.PlaceOrder(user.Id);
+                }
+
+                return new ServiceResponse<bool>() { Data = true };
+            }
+            catch (StripeException e)
+            {
+                return new ServiceResponse<bool>() { Data = false, Success = false, Message = e.Message };
+            }
         }
     }
 }
