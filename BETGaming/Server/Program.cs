@@ -6,6 +6,7 @@ global using BETGaming.Server.Services.AuthService;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using BETGaming.Server.Services.CartService;
 global using BETGaming.Server.Services.OrderService;
+global using BETGaming.Server.Services.PaymentService;
 
 using BETGaming.Server.Data;
 using System.Security.Cryptography;
@@ -28,6 +29,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICartService,CartService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

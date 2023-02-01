@@ -21,15 +21,17 @@ namespace BETGaming.Client.Services.OrderService
             return (await _AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity.IsAuthenticated;
         }
 
-        public async Task PlaceOrder()
+        public async Task<string> PlaceOrder()
         {
             if (await IsUserAuthenticated())
             {
-                 await _HttpClient.PostAsync("api/order/",null);
+                 var result = await _HttpClient.PostAsync("api/payment/checkout/",null);
+                var url = await result.Content.ReadAsStringAsync();
+                return url;
             }
             else
             {
-                _NavigationManager.NavigateTo("login");
+                return "login";
             }
             
         }
