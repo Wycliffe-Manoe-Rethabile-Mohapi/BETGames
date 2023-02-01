@@ -1,5 +1,6 @@
 ﻿using Stripe;
 using Stripe.Checkout;
+using static System.Net.WebRequestMethods;
 
 namespace BETGaming.Server.Services.PaymentService
 {
@@ -45,7 +46,22 @@ namespace BETGaming.Server.Services.PaymentService
                 };
 
                 lineItems.Add(item);
+
+                
             }
+            var options = new SessionCreateOptions()
+            {
+                CustomerEmail = _AuthService.GetUserEmail(),
+                PaymentMethodTypes = new List<string>() { "card" },
+                LineItems = lineItems,
+                Mode = "payment",
+                SuccessUrl = "https://localhost:7094/order-success",
+                CancelUrl = "https://localhost:7094/cart"
+            };
+
+            var service = new SessionService();
+            Session session =  service.Create(options);
+            return session;
         }
     }
 }

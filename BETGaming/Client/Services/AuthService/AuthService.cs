@@ -7,9 +7,9 @@ namespace BETGaming.Client.Services.AuthService
     public class AuthService : IAuthService
     {
         public HttpClient _HttpClient { get; }
-        public CustomAuthStateProvider _AuthStateProvider { get; }
+        public AuthenticationStateProvider _AuthStateProvider { get; }
 
-        public AuthService(HttpClient httpClient, CustomAuthStateProvider AuthStateProvider)
+        public AuthService(HttpClient httpClient, AuthenticationStateProvider AuthStateProvider)
         {
             _HttpClient = httpClient;
             this._AuthStateProvider = AuthStateProvider;

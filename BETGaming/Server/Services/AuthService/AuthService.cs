@@ -9,6 +9,7 @@ using System.Text;
 
 namespace BETGaming.Server.Services.AuthService
 {
+
     public class AuthService : IAuthService
     {
         public DataContext _Context { get; }
@@ -155,6 +156,11 @@ namespace BETGaming.Server.Services.AuthService
         public int GetUserId()
         {
             return int.Parse(_HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+        }
+
+        public string GetUserEmail()
+        {
+            return _HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
         }
     }
 }
