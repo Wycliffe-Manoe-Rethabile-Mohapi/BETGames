@@ -53,6 +53,13 @@ namespace BETGaming.Server.Services.PaymentService
             var options = new SessionCreateOptions()
             {
                 CustomerEmail = _AuthService.GetUserEmail(),
+                ShippingAddressCollection = new SessionShippingAddressCollectionOptions()
+                {
+                    AllowedCountries = new List<string>()
+                    {
+                        "ZA"
+                    }
+                },
                 PaymentMethodTypes = new List<string>() { "card" },
                 LineItems = lineItems,
                 Mode = "payment",
